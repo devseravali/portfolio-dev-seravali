@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Seravali | Desenvolvedor Frontend Júnior</title>
+    <link rel="icon" href="src/images/favicon-32x32.png" type="image/x-icon">
+
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsivo.css">
     <link rel="stylesheet" href="src/css/font-awesome.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -21,7 +29,10 @@
         <h1>Aline Seravali</h1>
         <h2>Oi, meu nome é Aline</h2>
         <p>Sou um Desenvolvedor FullStack diretamente de São Paulo! Tenho uma paixão especial por trabalhar com o Front-End dos websites, onde posso unir criatividade e tecnologia para criar experiências incríveis.</p>
-        <button a href="#contato">Contato</button>
+        
+        <a href="src/documentos/curriculo.pdf" download>
+            <button class="btn">Download CV</button>
+        </a>
         </main>
 
         <nav class="container-2">
@@ -30,17 +41,18 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#qualificacoes">Qualificações</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="sobre">
+        <img  class="logo-dev-seravali" src="src/images/logo-dev-seravali.png" alt="logo-dev-seravali">
         <h2>Sobre Mim</h2>
-        <p>Oi! Eu sou a Aline, mais conhecida como Dev Seravali, e simplesmente amo criar com código! Minha paixão pela programação nasceu em 2024, inspirada por animes como Naruto e Jujutsu Kaisen foi ali que percebi o quanto histórias de superação, estratégia e criatividade tinham tudo a ver com o universo da tecnologia.</p>
+        <p class="text">Oi! Eu sou a Aline, mais conhecida como Dev Seravali, e simplesmente amo criar com código! Minha paixão pela programação nasceu em 2024, inspirada por animes como Naruto e Jujutsu Kaisen foi ali que percebi o quanto histórias de superação, estratégia e criatividade tinham tudo a ver com o universo da tecnologia.</p>
 
-        <p>Desde então, mergulhei de cabeça no front-end e encontrei no curso DevQuest, do Dev em Dobro, um guia incrível nessa jornada. Cada projeto é uma nova aventura, e transformar ideias em interfaces bonitas, responsivas e funcionais é o que me move todos os dias. Bora codar? <p>
+        <p class="text">Desde então, mergulhei de cabeça no front-end e encontrei no curso DevQuest, do Dev em Dobro, um guia incrível nessa jornada. Cada projeto é uma nova aventura, e transformar ideias em interfaces bonitas, responsivas e funcionais é o que me move todos os dias. Bora codar? <p>
     </section>
 
     <section id="habilidades">
@@ -96,9 +108,17 @@
     <footer>
         <p>&copy; 2025 Dev Seravali. Todos os direitos reservados</p>
         <ul>
-            <li><a href="https://github.com/devseravali" target="_blank">GitHub</a></li>
+            <li>
+                <a href="https://github.com/devseravali" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
             
-            <li><a href="https://www.linkedin.com/in/aline-seravali-bandeira-meireles-da-silva-b8b8311b6/" target="_blank">LinkedIn</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/aline-seravali-bandeira-meireles-da-silva-b8b8311b6/" >
+                  <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
         </ul>
     </footer>
     <script type="text/javascript" src="index.js"></script>
