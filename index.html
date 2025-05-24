@@ -27,7 +27,7 @@
         <main class="container-1">
         <img src="src/images/foto-principal.jpg" alt="foto-principal">
         <h1>Oi, meu nome é Aline</h1>
-        <p>Sou um Desenvolvedor FullStack diretamente de São Paulo! Tenho uma paixão especial por trabalhar com o Front-End dos websites, onde posso unir criatividade e tecnologia para criar experiências incríveis.</p>
+        <p class="texto-0">Sou um Desenvolvedor FullStack diretamente de São Paulo! Tenho uma paixão especial por trabalhar com o Front-End dos websites, onde posso unir criatividade e tecnologia para criar experiências incríveis.</p>
         
         <a href="src/documentos/curriculo.pdf" download>
             <button class="btn">Download CV</button>
@@ -35,7 +35,7 @@
         </main>
 
         <nav class="container-2">
-            <ul>
+            <ul class="menu">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#qualificacoes">Qualificações</a></li>
@@ -49,29 +49,34 @@
     <section id="sobre">
         <img  class="logo-dev-seravali" src="src/images/logo-dev-seravali.png" alt="logo-dev-seravali">
         <h2>Sobre Mim</h2>
-        <p class="text">Oi! Eu sou a Aline, mais conhecida como Dev Seravali, e simplesmente amo criar com código! Minha paixão pela programação nasceu em 2024, inspirada por animes como Naruto e Jujutsu Kaisen foi ali que percebi o quanto histórias de superação, estratégia e criatividade tinham tudo a ver com o universo da tecnologia.</p>
-
-        <p class="text">Desde então, mergulhei de cabeça no front-end e encontrei no curso DevQuest, do Dev em Dobro, um guia incrível nessa jornada. Cada projeto é uma nova aventura, e transformar ideias em interfaces bonitas, responsivas e funcionais é o que me move todos os dias. Bora codar? <p>
+        <p class="text-1">Oi! Eu sou a Aline, mais conhecida como Dev Seravali, e simplesmente amo criar com código! Minha paixão pela programação nasceu em 2024, inspirada por animes como Naruto e Jujutsu Kaisen
+        foi ali que percebi o quanto histórias de superação, estratégia e criatividade tinham tudo a ver com o universo da tecnologia.<p>
+        <p class="text-1">Desde então, mergulhei de cabeça no front-end e encontrei no curso DevQuest, do Dev em Dobro, um guia incrível nessa jornada. Cada projeto é uma nova aventura, e transformar ideias em interfaces bonitas, responsivas e funcionais é o que me move todos os dias.</p>
     </section>
 
     <section id="habilidades">
         <h2>Habilidades</h2>
-        <ul>
-            <li>HTML - 100%</li>
-            <li>CSS - 90%</li>
-            <li>Javascript - 50%</li>
+        <ul  class="container-3">
+            <li class="progresso html porcetagem-1">HTML 100%</li>
+            <li class="progresso css porcetagem-2">CSS 90%</li>
+            <li class="progresso js porcetagem-3">JAVASCRIPT 50%</li>
         </ul>
-    </section>
 
-    <section id="qualificacoes">
-        <h2>Qualificações</h2>
-        <ul>
-            <li>Pedagogia - Faculdade Anhanguera (Fev de 2018 - Jul de 2025)</li>
-            <li>Semana do Zero ao Programador Contratado (31 de Mar de 2025 - 06 de Abr de 2025)</li>
-            <li>DevQuest - Dev em Dobro (Out de 2024 - Atualmente)</li>
-        </ul>
-    </section>
-
+        <section id="qualificacoes">
+            <h2>Qualificações</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">🎓 Pedagogia - Faculdade Anhanguera (Fev de 2018 - Jul de 2025)</div>
+                </div>
+                <div class="timeline-item right">
+                  <div class="content">💻 Semana do Zero ao Programador Contratado (31 de Mar - 06 de Abr de 2025)</div>
+                </div>
+                <div class="timeline-item left">
+                  <div class="content">👨‍💻 DevQuest - Dev em Dobro (Out de 2024 - Atualmente)</div>
+                </div>  
+            </div>
+        </section>
+        
     <section id="servicos">
         <h2>Serviços</h2>
         <ul>
