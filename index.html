@@ -15,26 +15,28 @@
     <link rel="stylesheet" href="src/css/font-awesome.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-    <header>
-        <main class="container-1">
-        <img src="src/images/foto-principal.jpg" alt="foto-principal">
-        <h1>Oi, meu nome é Aline</h1>
-        <p class="texto-0">Sou um Desenvolvedor FullStack diretamente de São Paulo! Tenho uma paixão especial por trabalhar com o Front-End dos websites, onde posso unir criatividade e tecnologia para criar experiências incríveis.</p>
-        
-        <a href="src/documentos/curriculo.pdf" download>
-            <button class="btn">Download CV</button>
-        </a>
+    <header class="container">
+        <main class="container container-1">
+            <img src="src/images/foto-principal.jpg" alt="foto-principal">
+            <h1 class=>Oi, meu nome é Aline</h1>
+            <p class="texto-0">Sou um Desenvolvedor <strong>FullStack</strong> diretamente de <strong>São
+            Paulo!</strong> Tenho uma paixão especial por trabalhar com o <strong>Front-End</strong> dos websites,
+            onde posso unir criatividade e tecnologia para criar experiências incríveis.</p>
+
+            <a href="src/documentos/curriculo.pdf" download>
+                <button class="btn">Download CV</button>
+            </a>
         </main>
 
-        <nav class="container-2">
+        <nav class="container container-2">
             <ul class="menu">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
@@ -46,89 +48,102 @@
         </nav>
     </header>
 
-    <section id="sobre">
-        <img  class="logo-dev-seravali" src="src/images/logo-dev-seravali.png" alt="logo-dev-seravali">
+    <section class="container" id="sobre">
+        <img class="logo-dev-seravali" src="src/images/logo-dev-seravali.png" alt="logo-dev-seravali">
         <h2>Sobre Mim</h2>
-        <p class="text-1">Oi! Eu sou a Aline, mais conhecida como Dev Seravali, e simplesmente amo criar com código! Minha paixão pela programação nasceu em 2024, inspirada por animes como Naruto e Jujutsu Kaisen
-        foi ali que percebi o quanto histórias de superação, estratégia e criatividade tinham tudo a ver com o universo da tecnologia.<p>
-        <p class="text-1">Desde então, mergulhei de cabeça no front-end e encontrei no curso DevQuest, do Dev em Dobro, um guia incrível nessa jornada. Cada projeto é uma nova aventura, e transformar ideias em interfaces bonitas, responsivas e funcionais é o que me move todos os dias.</p>
+        <p class="texto-1">Oi! Eu sou a <strong>Aline</strong>, mais conhecida como <strong>Dev Seravali</strong>, e sou apaixonada por criar com código! Minha jornada na programação começou em 2024, inspirada por animes como <em>Naruto, Jujutsu Kaisen, One Piece, Attack on Titan e My Hero Academia.</em> Foi através dessas histórias de superação, estratégia e criatividade que percebi o quanto elas se conectam com o universo da tecnologia e foi aí que descobri meu propósito: transformar ideias em soluções digitais com impacto.</p>
+
+        <p class="texto-1">Desde então, mergulhei de cabeça no <strong>Front-End</strong> e encontrei no curso <strong>DevQuest</strong>, do <strong>Dev em Dobro</strong>, uma base sólida para dar meus primeiros passos. Em seguida, iniciei minha jornada na <strong>Rocketseat</strong>, onde venho aprofundando meus conhecimentos com projetos práticos e desafiadores. Cada projeto é uma nova aventura transformar ideias em interfaces bonitas, responsivas e funcionais é o que me motiva todos os dias.</p>
     </section>
 
-    <section id="habilidades">
+    <section class="container" id="habilidades">
         <h2>Habilidades</h2>
-        <ul  class="container-3">
+        <ul class="container-3">
             <li class="progresso html porcetagem-1">HTML 100%</li>
             <li class="progresso css porcetagem-2">CSS 90%</li>
             <li class="progresso js porcetagem-3">JAVASCRIPT 50%</li>
         </ul>
 
-        <section id="qualificacoes">
+        <section class="container" id="qualificacoes">
             <h2>Qualificações</h2>
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="content">🎓 Pedagogia - Faculdade Anhanguera (Fev de 2018 - Jul de 2025)</div>
                 </div>
                 <div class="timeline-item right">
-                  <div class="content">💻 Semana do Zero ao Programador Contratado (31 de Mar - 06 de Abr de 2025)</div>
+                    <div class="content">💻 Semana do Zero ao Programador Contratado (31 de Mar - 06 de Abr de 2025)
+                    </div>
                 </div>
                 <div class="timeline-item left">
-                  <div class="content">👨‍💻 DevQuest - Dev em Dobro (Out de 2024 - Atualmente)</div>
-                </div>  
+                    <div class="content">👨‍💻 DevQuest - Dev em Dobro (Out de 2024 - Atualmente)</div>
+                </div>
                 <div class="timeline-item right">
                     <div class="content">👨‍💻 Rocketseat (Mai de 2025 - Atualmente)</div>
-                  </div>  
+                </div>
             </div>
         </section>
-        
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <ul>
-            <li>Desenvolvimento Front-End</li>
-        </ul>
-    </section>
 
-    <section id="portfolio">
-        <h2>Portfólio</h2>
-        <ul>
-            <li>Projeto 1</li>
-            <li>Projeto 2</li>
-            <li>Projeto 3</li>
-        </ul>
-    </section>
-    
-    <section id="contato">
-        <h2>Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required/>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem"></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Dev Seravali. Todos os direitos reservados</p>
-        <ul>
-            <li>
-                <a href="https://github.com/devseravali" target="_blank">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </li>
-            
-            <li>
-                <a href="https://www.linkedin.com/in/aline-seravali-bandeira-meireles-da-silva-b8b8311b6/" >
-                  <i class="fa-brands fa-linkedin"></i>
-                  </a>
+        <section class="container" id="servicos">
+            <header>
+                <h2 class="servico-titulo">Serviços</h2>
+            </header>
+            <ul class="servicos" role="list">
+                <li class="texto-2">
+                    <h3>Desenvolvimento Front-End</h3>
+                    <p>Criação de interfaces modernas, responsivas e otimizadas, com foco em perfomance e usabilibidade</p>
                 </li>
-        </ul>
-    </footer>
-    <script type="text/javascript" src="index.js"></script>
-</body>
+                <li class="texto-2">
+                    <h3>Consultoria Técnica</h3>
+                    <p>Análise de projetos, escolha de tecnologias e orientação para decisões técnicas eficazes.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="container" id="portfolio">
+            <h2 class="portfolio-titulo">Portfólio</h2>
+            <div class="projetos">
+                <article class="card-projeto">
+                    <h3>Projeto</h3>
+                    <img class="projeto" src="src/images/projeto-em-andamento.png" alt="projeto-em-andamento">
+                    <!-- <p>Descrição breve do projeto. Tecnologias usadas, objetivo, etc.</p>
+                    <a href="" target="_blank">Ver Projeto</a> -->
+                </article>
+            </div> 
+        </section>
+          
 
+        <section class="container" id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer class="container container-footer">
+            <p>&copy; 2025 Dev Seravali. Todos os direitos reservados</p>
+            <ul class="social-links">
+                <li>
+                    <a href="https://github.com/devseravali" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/aline-seravali-bandeira-meireles-da-silva-b8b8311b6/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="index.js"></script>
+</body>
 </html>

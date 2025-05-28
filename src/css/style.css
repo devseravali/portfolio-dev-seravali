@@ -1,6 +1,8 @@
-html{
-    max-width: 1640px;
-}
+ html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+} 
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -9,11 +11,19 @@ body {
     padding: 0;
     background: linear-gradient( 135deg,var(--cor-fundo), var(--cor-principal));
     color: var(--texto-normal);
+    width: 100%;
 }
+
+.container {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
 .container-1, .container-2 {
     margin: 0 auto;
     padding: 2rem;
+    font-weight: 400;
 }
 
 header{
@@ -44,15 +54,15 @@ header h1, header h2{
     border: 4px solid var(--cor-titulo);
 }
 
-.text-1{
+.texto-0{
     max-width: 700px;
-    margin:  1rem auto;
+    margin: 1rem auto;
     text-align: center;
     font-size: 1.1rem;
     font-weight: 400;
 }
 
-header p{
+.texto-1{
     max-width: 700px;
     margin:  1rem auto;
     text-align: center;
@@ -62,7 +72,7 @@ header p{
 
 .btn{
   position: absolute;
-  top: 62%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -281,6 +291,53 @@ nav a:hover{
     }
 }
 
+.servicos{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.servicos h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--cor-titulo);
+}
+
+.servicos li{
+    background-color: var(--cor-principal);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.servicos li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.1);
+}
+
+.servicos h3{
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--cor-titulo);
+    font-weight: 800;
+}
+
+.servicos p{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto-normal);
+    font-weight: 400;
+}
+
+.projetos{
+    text-align: center;
+    width: 100%;
+}
+
 section{
     padding: 3rem 2rem;
 }
@@ -300,6 +357,7 @@ form{
     max-width: 500px;
     margin:  0 auto;
     font-weight: 800;
+    padding: 1rem;
 }
 
 form input, form textarea{
@@ -316,6 +374,7 @@ form button{
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    font-weight: 700;
 }
 
 form button:hover{
@@ -326,24 +385,38 @@ form button:hover{
 footer{
     background-color: var(--cor-fundo);
     color: var(--texto-normal);
-    text-align: center;
+    width: 100%;
     padding: 2rem 1rem;
-    margin-top: 2rem;
 }
 
-footer ul{
+.container-footer{
+    max-width: 1640px;
+    margin: 0 auto;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.container-footer p{
+    margin:  0 auto;
+}
+
+.container-footer ul.social-links{
+    display: flex;
+    gap: 1.5rem;
     padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
-footer a{
+.container-footer ul.social-links li a i{
+    font-size: 1.5rem;
     color: var(--texto-normal);
-    transition: 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 
-footer a:hover{
-    background-color: var(--links-hover);
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+.container-footer ul.social-links a:hover i{
+    color: var(--links-hover);
 }
