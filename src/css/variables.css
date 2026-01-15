@@ -1,8 +1,184 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
+    /* Tipografia */
+    --fonte-principal: 'Poppins', system-ui, sans-serif;
+
+    /* Layout */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    /* Espaçamentos */
+    --gap-xs: 0.25rem;
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 2rem;
+    --gap-xl: 4rem;
+
+    /* Transições */
+    --transicao-rapida: 0.2s ease;
+    --transicao: 0.3s ease;
+    --transicao-lenta: 0.5s ease;
+
+    /* Sombras */
+    --sombra-leve: 0 2px 10px rgba(0, 0, 0, 0.25);
+    --sombra-media: 0 8px 28px rgba(0, 0, 0, 0.35);
+    --sombra-forte: 0 16px 48px rgba(0, 0, 0, 0.45);
+
+    /* Z-index */
+    --z-header: 1000;
+    --z-menu: 1100;
+    --z-modal: 1200;
+    --z-tooltip: 1300;
+
+    /* Larguras */
+    --container-max: 1200px;
+    --container-padding: 1.5rem;
+
+    /* Bordas */
+    --borda-fina: 1px solid;
+    --borda-media: 2px solid;
+
+    /* Opacidade */
+    --opacidade-desativado: 0.6;
+}
+
+/* =========================================================
+   ESTÉTICA 1 — DARK QUENTE (VINHO + DOURADO) [Padrão]
+   Ative com: <body class="theme-warm">
+   (se não usar classe, você pode deixar isso como padrão no :root)
+   ========================================================= */
+:root,
+body.theme-warm {
+    /* IDENTIDADE */
     --cor-principal: #5a0f0f;
-    --cor-fundo:  #b91515;
+    /* vinho */
+    --cor-secundaria: #8b1414;
+    /* vermelho profundo */
     --cor-titulo: #d4af37;
+    /* dourado */
+    --cor-dourado-hover: #b8962e;
+
+    /* FUNDOS (escuro quente) */
+    --bg-body: #160f0f;
+    /* vinho carvão */
+    --bg-header: linear-gradient(135deg, #5a0f0f, #3a0d0d);
+    --bg-section: #1b1313;
+    /* base de leitura */
+    --bg-card: #241a1a;
+    /* card mais claro */
+    --bg-footer: #110909;
+
+    /* TEXTO */
+    --texto-principal: #f3e9e9;
+    /* leitura */
+    --texto-secundario: #d9c2c2;
+    /* subtítulos */
+    --texto-muted: #a98989;
+    /* detalhes */
     --texto-normal: #f5f5f5;
-    --links-hover: #c2181e;
-    --rodape-site: #0f5a5a
+    /* header/hero */
+    --texto-invertido: #120202;
+    /* texto sobre dourado */
+
+    /* LINKS */
+    --link: var(--cor-titulo);
+    --link-hover: #e63946;
+
+    /* BOTÕES */
+    --btn-bg: var(--cor-titulo);
+    --btn-bg-hover: var(--cor-dourado-hover);
+    --btn-texto: #120202;
+    --btn-texto-hover: #120202;
+    --btn-bg-hover-curriculo: #2b0606;
+    --btn-texto-hover-curriculo: var(--cor-dourado-hover);
+    --btn-borda: transparent;
+
+    /* CARDS / SKILLS */
+    --card-bg: var(--bg-card);
+    --card-borda: #3a0d0d;
+    --card-hover: #2e2222;
+
+    /* FILTROS */
+    --filtro-bg: #2a1d1d;
+    --filtro-texto: #f3e9e9;
+    --filtro-ativo-bg: var(--cor-titulo);
+    --filtro-ativo-texto: #120202;
+
+    /* BADGES */
+    --nivel-bg: var(--cor-titulo);
+    --nivel-texto: #120202;
+
+    /* EXTRAS */
+    --img-borda: var(--cor-titulo);
+    --topo-bg: var(--cor-titulo);
+    --topo-hover: var(--cor-dourado-hover);
+}
+
+/* =========================================================
+   ESTÉTICA 2 — DARK PROFUNDO (GRAFITE QUENTE) [Alternativo]
+   Ative com: <body class="theme-deep">
+   ========================================================= */
+body.theme-deep {
+    /* IDENTIDADE (mantém a marca, muda o “ambiente”) */
+    --cor-principal: #2b0606;
+    /* vinho mais fechado */
+    --cor-secundaria: #7a1414;
+    --cor-titulo: #e6c158;
+    /* dourado mais claro */
+    --cor-dourado-hover: #c9a63d;
+
+    /* FUNDOS (escuro profundo neutro QUENTE, sem cinza frio) */
+    --bg-body: #0e0c0c;
+    /* quase preto quente */
+    --bg-header: linear-gradient(135deg, #2b0606, #151010);
+    --bg-section: #141010;
+    /* leitura */
+    --bg-card: #1b1515;
+    /* card */
+    --bg-footer: #070606;
+
+    /* TEXTO */
+    --texto-principal: #f4eeee;
+    --texto-secundario: #d3c1c1;
+    --texto-muted: #9f8686;
+    --texto-normal: #f5f5f5;
+    --texto-invertido: #0e0c0c;
+
+    /* LINKS */
+    --link: var(--cor-titulo);
+    --link-hover: #ff4d57;
+
+    /* BOTÕES */
+    --btn-bg: var(--cor-titulo);
+    --btn-bg-hover: var(--cor-dourado-hover);
+    --btn-texto: #0e0c0c;
+    --btn-texto-hover: #0e0c0c;
+    --btn-bg-hover-curriculo: #0e0c0c;
+    --btn-texto-hover-curriculo: var(--cor-dourado-hover);
+    --btn-borda: transparent;
+
+    /* CARDS / SKILLS */
+    --card-bg: var(--bg-card);
+    --card-borda: #2a1d1d;
+    --card-hover: #241c1c;
+
+    /* FILTROS */
+    --filtro-bg: #1f1818;
+    --filtro-texto: #f4eeee;
+    --filtro-ativo-bg: var(--cor-titulo);
+    --filtro-ativo-texto: #0e0c0c;
+
+    /* BADGES */
+    --nivel-bg: var(--cor-titulo);
+    --nivel-texto: #0e0c0c;
+
+    /* EXTRAS */
+    --img-borda: var(--cor-titulo);
+    --topo-bg: var(--cor-titulo);
+    --topo-hover: var(--cor-dourado-hover);
 }

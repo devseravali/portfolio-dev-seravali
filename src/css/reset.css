@@ -4,6 +4,16 @@
     padding: 0;
 }
 
-ul li{
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+ul li {
     list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
 }
