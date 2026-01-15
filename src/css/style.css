@@ -639,6 +639,6 @@ figcaption {
     transform: translateY(-1px);
 }
 
-.btn-menu {
+.btn-menu, .btn-menu-fechar {
     display: none;
 }
