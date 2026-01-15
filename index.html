@@ -24,11 +24,15 @@
 
 <body>
     <header class="container-header">
-        <button class="btn-toggle-theme" aria-label="Alternar tema">
-            <i class="fa-solid fa-moon"></i>
-        </button>
+        <div class="header-row">
+            <button class="btn-toggle-theme" aria-label="Alternar tema" data-theme="day">
+                <i class="fa-solid fa-moon"></i>
+            </button>
 
-        <h1 class="logo">Dev Seravali</h1>
+            <h1 class="logo">
+                <img class="logo-img" src="src/images/logo-dev-seravali.png" alt="Logo Dev Seravali">
+            </h1>
+        </div>
 
         <nav aria-label="Navegação principal">
             <ul class="menu" role="menubar">
@@ -42,295 +46,433 @@
     </header>
 
     <section class="hero container-sobre">
-        <img src="src/images/foto-principal.png" alt="foto-principal">
+        <img class="foto-principal" src="src/images/foto-principal.png" alt="foto-principal">
         <h2 class="titulo">Aline Seravali</h2>
         <p class="subtitulo">Dev Seravali · Desenvolvedora Full Stack</p>
         <p class="profissional">Profissional Full Stack, atuando no desenvolvimento de soluções digitais e sistemas
             completos há mais de 2 anos.</p>
-        <a href="src/documentos/curriculo-aline-seravali.pdf" download>
-            <button class="btn">Download CV</button>
-        </a>
-        <a href="https://github.com/dev-seravali" target="_blank" rel="noopener noreferrer" class="btn-social">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/dev-seravali/" target="_blank" rel="noopener noreferrer"
-            class="btn-social">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
+
+        <div class="botoes-hero">
+            <a href="src/documentos/curriculo-aline-seravali.pdf" download>
+                <button class="btn">Download CV</button>
+            </a>
+            <a href="https://github.com/dev-seravali" target="_blank" rel="noopener noreferrer" class="btn-social">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/dev-seravali/" target="_blank" rel="noopener noreferrer"
+                class="btn-social">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
     </section>
 
     <section class="sobre" id="sobre">
-        <h2>Sobre mim</h2>
-        <p>Sou Aline Seravali (Dev Seravali), profissional Full Stack com mais de 1 ano criando soluções digitais e
-            sistemas completos. Atuo do front-end ao back-end, com foco em código organizado, projetos práticos e
-            evolução contínua. Além do desenvolvimento, compartilho minha jornada de aprendizado no YouTube,
-            documentando projetos, estudos e o processo real de crescimento na área de tecnologia.</p>
+        <h2 class="sobre-mim">Sobre mim</h2>
+        <p class="sobre-texto">Sou <span class="sobre-destaque">Aline Seravali (Dev Seravali)</span>, profissional Full
+            Stack com mais de 1 ano de
+            experiência no desenvolvimento de soluções digitais e sistemas completos. Atuo do front-end ao back-end, com
+            foco em
+            código organizado, projetos práticos e evolução contínua. Tenho uma base sólida em desenvolvimento web e
+            busco sempre
+            aplicar boas práticas, pensando em escalabilidade, manutenção e qualidade do software.</p>
+
+        <p class="sobre-texto">Além do desenvolvimento técnico, compartilho minha jornada de aprendizado no YouTube,
+            onde documento projetos, estudos e
+            o processo real de crescimento na área de tecnologia. Acredito que aprender construindo e compartilhar
+            conhecimento de
+            forma transparente fortalece não só meu próprio aprendizado, mas também o de outras pessoas que estão
+            iniciando ou
+            evoluindo na área. </p>
     </section>
 
     <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <h3>Mapa de Habilidades</h3>
+        <header class="header-skills">
+            <h3 class="titulo-skill">Skills</h3>
+            <p class="subtitulo-skill">Mapa de Habilidades</p>
+        </header>
 
-        <nav aria-label="Filtrar habilidades">
-            <ul class="filtros-skills">
-                <li><button class="filtro ativo" data-filtro="todas">Todas</button></li>
-                <li><button class="filtro" data-filtro="frontend">Front End</button></li>
-                <li><button class="filtro" data-filtro="backend">Back End</button></li>
-                <li><button class="filtro" data-filtro="banco">Banco & ORM</button></li>
-                <li><button class="filtro" data-filtro="testes">Testes</button></li>
-                <li><button class="filtro" data-filtro="ferramentas">Ferramentas</button></li>
-                <li><button class="filtro" data-filtro="ia">IA</button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Front End</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="HTML5, nível avançado"
+                        data-descricao="Estruturação semântica, estilos organizados e layouts responsivos para aplicações web.">
+                        HTML5 <span class="nivel">Avançado</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="CSS3, nível avançado"
+                        data-descricao="Criação de interfaces adaptáveis, acessíveis e bem estruturadas para diferentes dispositivos.">
+                        CSS3 <span class="nivel">Avançado</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="JavaScript (ES6+), nível avançado"
+                        data-descricao="Implementação de lógica, manipulação de DOM, estados, eventos e fluxos completos da aplicação.">
+                        JavaScript (ES6+) <span class="nivel">Avançado</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="TypeScript, nível intermediário"
+                        data-descricao="Uso de tipagem para maior segurança, organização e previsibilidade do código.">
+                        TypeScript <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="React.js, nível básico-intermediário"
+                        data-descricao="Criação de componentes funcionais, organização de UI e gerenciamento de estado.">
+                        React.js <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Styled Components, nível avançado"
+                        data-descricao="Uso de CSS-in-JS para estilos por componente, organização visual e reutilização em React.">
+                        Styled Components <span class="nivel">Avançado</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Tailwind CSS, nível básico"
+                        data-descricao="Estilização rápida utilizando classes utilitárias para prototipação e layouts simples.">
+                        Tailwind CSS <span class="nivel">Básico</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Responsividade e Semântica, nível avançado"
+                        data-descricao="Design responsivo e uso correto de elementos semânticos para melhor acessibilidade e SEO.">
+                        Responsividade &amp; Semântica <span class="nivel">Avançado</span>
+                    </button>
+                </li>
             </ul>
-        </nav>
-
-        <section class="descricao-skill" id="descricao-skill">
-            <p>Clique em uma skill para ver a descrição aqui.</p>
         </section>
 
-        <section class="container-skills">
-            <section class="skills-grupo">
-                <h4>Front End</h4>
-                <section class="skills-grupo">
-                    <h4>Front End</h4>
-                    <ul class="skills-ilha">
-                        <li><button class="skill-card" aria-label="HTML5, nível avançado"
-                                data-descricao="Estruturação semântica, estilos organizados e layouts responsivos para aplicações web.">HTML5
-                                <span class="nivel">Avançado</span></button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Back End</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Node.js, nível intermediário"
+                        data-descricao="Desenvolvimento de servidores e lógica de negócio em aplicações back-end.">
+                        Node.js <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="CSS3, nível avançado"
-                                data-descricao="Criação de interfaces adaptáveis, acessíveis e bem estruturadas para diferentes dispositivos.">CSS3
-                                <span class="nivel">Avançado</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Express.js, nível intermediário"
+                        data-descricao="Criação de APIs REST com rotas, middlewares e organização estrutural.">
+                        Express.js <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="JavaScript, nível avançado"
-                                data-descricao="Implementação de lógica, manipulação de DOM, estados, eventos e fluxos completos da aplicação.">JavaScript
-                                (ES6+)
-                                <span class="nivel">Avançado</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="APIs REST, nível intermediário"
+                        data-descricao="Desenvolvimento de endpoints seguindo padrões REST e boas práticas.">
+                        APIs REST <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="TypeScript, nível intermediário"
-                                data-descricao="Uso de tipagem para maior segurança, organização e previsibilidade do código.">TypeScript
-                                <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Validação de Dados, nível intermediário"
+                        data-descricao="Garantia de integridade e consistência dos dados recebidos pelas APIs.">
+                        Validação de Dados <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="React, nível básico-intermediário"
-                                data-descricao="Criação de componentes funcionais, organização de UI e gerenciamento de estado.">React.js
-                                <span class="nivel">Básico–Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Arquitetura em Camadas, nível intermediário"
+                        data-descricao="Separação de responsabilidades em Controller, Service e Repository.">
+                        Arquitetura em Camadas <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
 
-                        <li><button class="skill-card" aria-label="Styled Components, nível avançado"
-                                data-descricao="Uso de CSS-in-JS para estilos por componente, organização visual e reutilização em React.">Styled
-                                Components <span class="nivel">Avançado</span></button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Banco de Dados &amp; ORM</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="PostgreSQL, nível intermediário"
+                        data-descricao="Uso de banco relacional para persistência e consulta de dados em aplicações reais.">
+                        PostgreSQL <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="Tailwind CSS, nível básico"
-                                data-descricao="Estilização rápida utilizando classes utilitárias para prototipação e layouts simples">Tailwind
-                                CSS <span class="nivel">Básico</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Drizzle ORM, nível básico-intermediário"
+                        data-descricao="Mapeamento de dados tipado e integração eficiente com PostgreSQL.">
+                        Drizzle ORM <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
 
-                        <li><button class="skill-card" aria-label="Responsividade e Semântica, nível avançado"
-                                data-descricao="Design responsivo e uso correto de elementos semânticos para melhor acessibilidade e SEO.">Responsividade
-                                & Semântica <span class="nivel">Avançado</span></button>
-                        </li>
-                    </ul>
-                </section>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Prisma ORM, nível básico"
+                        data-descricao="Uso inicial de ORM para abstração e acesso ao banco de dados.">
+                        Prisma ORM <span class="nivel">Básico</span>
+                    </button>
+                </li>
 
-                <h4>Back End</h4>
-                <ul class="skills-ilha">
-                    <li><button class="skill-card"
-                            data-descricao="Desenvolvimento de servidores e lógica de negócio em aplicações back-end.">Node.js
-                            <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Modelagem de Dados, nível intermediário"
+                        data-descricao="Definição de tabelas, relações e estrutura lógica do banco de dados.">
+                        Modelagem de Dados <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
 
-                    <li><button class="skill-card"
-                            data-descricao="Criação de APIs REST com rotas, middlewares e organização estrutural.">Express.js
-                            <span class="nivel">Intermediário</span></button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Testes</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Testes Unitários, nível básico-intermediário"
+                        data-descricao="Validação de funções, serviços e regras de negócio de forma isolada.">
+                        Testes Unitários <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Desenvolvimento de endpoints seguindo padrões REST e boas práticas.">APIs
-                            REST <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Vitest, nível básico-intermediário"
+                        data-descricao="Execução de testes unitários rápidos em projetos modernos com Vite.">
+                        Vitest <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Garantia de integridade e consistência dos dados recebidos pelas APIs.">Validação
-                            de Dados <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Jest, nível básico"
+                        data-descricao="Uso de framework de testes para validar comportamentos esperados do código.">
+                        Jest <span class="nivel">Básico</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Separação de responsabilidades em Controller, Service e Repository.">Arquitetura
-                            em Camadas <span class="nivel">Intermediário</span></button>
-                    </li>
-                </ul>
-            </section>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Testes de Serviços e Lógica de Negócio, nível básico"
+                        data-descricao="Verificação de fluxos e regras centrais da aplicação.">
+                        Testes de Serviços e Lógica de Negócio <span class="nivel">Básico</span>
+                    </button>
+                </li>
 
-            <section class="skills-grupo">
-                <h4>Banco de Dados & ORM</h4>
-                <ul class="skills-ilha">
-                    <li><button class="skill-card"
-                            data-descricao="Uso de banco relacional para persistência e consulta de dados em aplicações reais.">PostgreSQL
-                            <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Boas Práticas de Testes, nível básico"
+                        data-descricao="Organização, clareza e foco em cenários relevantes e casos de borda.">
+                        Boas Práticas de Testes <span class="nivel">Básico</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
 
-                    <li><button class="skill-card"
-                            data-descricao="Mapeamento de dados tipado e integração eficiente com PostgreSQL.">Drizzle
-                            ORM <span class="nivel">Básico–Intermediário</span></button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Ferramentas &amp; Ambiente</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="VS Code, nível avançado"
+                        data-descricao="Ambiente principal de desenvolvimento com uso diário e extensões.">
+                        VS Code <span class="nivel">Avançado</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Uso inicial de ORM para abstração e acesso ao banco de dados.">Prisma
-                            ORM<span class="nivel">Básico</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Git, nível intermediário"
+                        data-descricao="Versionamento de código com commits organizados e controle de mudanças.">
+                        Git <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Definição de tabelas, relações e estrutura lógica do banco de dados.">Modelagem
-                            de Dados <span class="nivel">Intermediário</span></button></li>
-                </ul>
-            </section>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="GitHub, nível intermediário"
+                        data-descricao="Gerenciamento de repositórios, versionamento e compartilhamento de projetos.">
+                        GitHub <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-            <section class="skills-grupo">
-                <h4>Testes</h4>
-                <ul class="skills-ilha">
-                    <li><button class="skill-card"
-                            data-descricao="Validação de funções, serviços e regras de negócio de forma isolada.">Testes
-                            Unitários <span class="nivel">Básico–Intermediário</span></button>
-                    </li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Docker, nível básico"
+                        data-descricao="Conhecimento inicial de containers para padronização de ambientes.">
+                        Docker <span class="nivel">Básico</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Execução de testes unitários rápidos em projetos modernos com Vite.">Vitest
-                            <span class="nivel">Básico–Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Swagger, nível básico"
+                        data-descricao="Documentação de APIs para facilitar entendimento e consumo.">
+                        Swagger <span class="nivel">Básico</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Uso de framework de testes para validar comportamentos esperados do código.">Jest
-                            <span class="nivel">Básico</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button" aria-label="Figma, nível intermediário"
+                        data-descricao="Leitura, adaptação e criação de protótipos simples de interfaces.">
+                        Figma <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
 
-                    <li><button class="skill-card"
-                            data-descricao="Verificação de fluxos e regras centrais da aplicação.">Testes de Serviços e
-                            Lógica de Negócio <span class="nivel">Básico</span></button></li>
+        <section class="skills-grupo">
+            <h4 class="ilha-titulo">Inteligência Artificial Aplicada</h4>
+            <ul class="skills-ilha">
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Apoio ao Desenvolvimento, nível básico-intermediário"
+                        data-descricao="Uso de IA como suporte na resolução de problemas e refinamento de soluções.">
+                        Apoio ao Desenvolvimento <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Organização, clareza e foco em cenários relevantes e casos de borda.">Boas
-                            Práticas de Testes <span class="nivel">Básico</span></button></li>
-                </ul>
-            </section>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Apoio a Estudos Técnicos, nível intermediário"
+                        data-descricao="Auxílio no aprendizado, comparação de abordagens e consolidação de conceitos.">
+                        Apoio a Estudos Técnicos <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-            <section class="skills-grupo">
-                <h4>Ferramentas & Ambiente</h4>
-                <ul class="skills-ilha">
-                    <li><button class="skill-card"
-                            data-descricao="Ambiente principal de desenvolvimento com uso diário e extensões.">VS Code
-                            <span class="nivel">Avançado</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Planejamento de Projetos, nível intermediário"
+                        data-descricao="Apoio na definição de arquitetura, fluxos e organização de tarefas.">
+                        Planejamento de Projetos <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Versionamento de código com commits organizados e controle de mudanças.">Git
-                            <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Revisão de Código, nível intermediário"
+                        data-descricao="Uso de IA para melhorar legibilidade, identificar pontos de atenção e boas práticas.">
+                        Revisão de Código <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Gerenciamento de repositórios, versionamento e compartilhamento de projetos.">GitHub
-                            <span class="nivel">Intermediário</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Documentação Técnica, nível intermediário"
+                        data-descricao="Auxílio na escrita e organização de documentação clara e objetiva.">
+                        Documentação Técnica <span class="nivel">Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Conhecimento inicial de containers para padronização de ambientes.">Docker
-                            <span class="nivel">Básico</span></button></li>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Apoio à Criação de Testes, nível básico-intermediário"
+                        data-descricao="Sugestão de cenários e casos de teste para melhorar cobertura.">
+                        Apoio à Criação de Testes <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
 
-                    <li><button class="skill-card"
-                            data-descricao="Documentação de APIs para facilitar entendimento e consumo.">Swagger <span
-                                class="nivel">Básico</span></button></li>
-
-
-                    <li><button class="skill-card"
-                            data-descricao="Leitura, adaptação e criação de protótipos simples de interfaces.">Figma
-                            <span class="nivel">Intermediário</span></button></li>
-                </ul>
-            </section>
-
-            <section class="skills-grupo">
-                <h4>Inteligência Artificial Aplicada</h4>
-                <ul class="skills-ilha">
-                    <li><button class="skill-card"
-                            data-descricao="Uso de IA como suporte na resolução de problemas e refinamento de soluções.">Apoio
-                            ao Desenvolvimento <span class="nivel">Básico–Intermediário</span></button></li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Auxílio no aprendizado, comparação de abordagens e consolidação de conceitos.">Apoio
-                            a Estudos Técnicos <span class="nivel">Intermediário</span></button></li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Apoio na definição de arquitetura, fluxos e organização de tarefas.">Planejamento
-                            de Projetos <span class="nivel">Intermediário</span></button></li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Uso de IA para melhorar legibilidade, identificar pontos de atenção e boas práticas.">Revisão
-                            de Código <span class="nivel">Intermediário</span></button></li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Auxílio na escrita e organização de documentação clara e objetiva.">Documentação
-                            Técnica <span class="nivel">Intermediário</span></button>
-                    </li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Sugestão de cenários e casos de teste para melhorar cobertura.">Apoio á
-                            Criação de Testes <span class="nivel">Básico–Intermediário</span></button></li>
-
-                    <li><button class="skill-card"
-                            data-descricao="Sugestão de cenários e casos de teste para melhorar cobertura.">Análise de
-                            Falhas de Testes <span class="nivel">Básico–Intermediário</span></button></li>
-                </ul>
-            </section>
+                <li>
+                    <button class="skill-card button-skill" type="button"
+                        aria-label="Análise de Falhas de Testes, nível básico-intermediário"
+                        data-descricao="Sugestão de cenários e casos de teste para melhorar cobertura.">
+                        Análise de Falhas de Testes <span class="nivel">Básico–Intermediário</span>
+                    </button>
+                </li>
+            </ul>
         </section>
     </section>
 
+
     <section class="conteudo" id="conteudo">
-        <h2>Conteúdo & Comunidade</h2>
-        <p>No canal <strong>Dev Seravali</strong>, compartilho minha jornada como desenvolvedora Full Stack por meio da
+        <h2 class="conteudo-titulo">Conteúdo & Comunidade</h2>
+        <p class="paragrafo-conteudo">No canal <strong class="conteudo-destaque">Dev Seravali</strong>, compartilho
+            minha jornada como <strong class="conteudo-destaque">Desenvolvedora Full Stack</strong> por meio da
             prática contínua e do desenvolvimento de projetos reais. Os vídeos mostram o processo de construção de
             aplicações, estudos técnicos, organização de código e decisões de arquitetura ao longo do aprendizado.</p>
 
-        <p>Além dos projetos, o canal também traz comentários sobre notícias e tendências do mercado de tecnologia,
+        <p class="paragrafo-conteudo">Além dos projetos, o canal também traz comentários sobre notícias e tendências do
+            mercado de tecnologia,
             sempre conectando essas atualizações com a realidade do desenvolvimento e da carreira em tecnologia. A
             proposta é apresentar conteúdo técnico acessível, focado em evolução, consistência e aprendizado prático.
         </p>
 
-        <p>O canal funciona como um registro da minha evolução profissional, além de um espaço para compartilhar
+        <p class="paragrafo-conteudo">O canal funciona como um registro da minha evolução profissional, além de um
+            espaço para compartilhar
             aprendizados, práticas e experiências com pessoas que também estão em processo de desenvolvimento na área de
             tecnologia.</p>
 
-        <a href="https://www.youtube.com/@devseravali" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+        <div class="video-canal">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jpN9lO848ms"
+                title="Vídeo do canal Dev Seravali" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <a class="canal" href="https://www.youtube.com/@devseravali" target="_blank" rel="noopener noreferrer"
+            class="btn-youtube">
             <i class="fa-brands fa-youtube"></i> Acessar canal no YouTube</a>
     </section>
 
     <section class="projetos" id="projetos">
-        <h2>Projetos</h2>
+        <h2 class="projetos-titulo">Projetos</h2>
         <article class="projeto">
             <figure>
-                <img src="src/images/gif/rainha-da-feijoada.gif" alt="Rainha da Feijoada - Sistema Delivery">
+                <img class="projeto-img" src="src/images/gif/rainha-da-feijoada.gif"
+                    alt="Rainha da Feijoada - Sistema Delivery">
                 <figcaption>Interface do sistema de delivery Rainha da Feijoada em funcionamento</figcaption>
             </figure>
 
-            <h3>Rainha da Feijoada - Sistema Delivery</h3>
-            <p>Sistema de delivery com fluxo completo de pedidos, do carrinho ao acompanhamento do status, desenvolvido
+            <h3 class="projeto-titulo">Rainha da Feijoada - Sistema Delivery</h3>
+            <p class="subtitulo-projeto">Sistema de delivery com fluxo completo de pedidos, do carrinho ao <br>
+                acompanhamento do status, desenvolvido
                 com JavaScript
                 puro.</p>
             <button onclick="mostrarDetalhes()" aria-expanded="false" class="btn-detalhes">Ver Detalhes</button>
 
-            <h4 class="oculto">Stack</h4>
-            <ul class="oculto">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+            <div class="projeto-infos">
 
-            <h4 class="oculto">Funcionalidades</h4>
-            <ul class="oculto">
-                <li>Fluxo completo de pedido (cliente, carrinho e acompanhamento)</li>
-                <li>Carrinho dinâmico com cálculo automático de valores</li>
-                <li>Persistência de dados utilizando localStorage</li>
-                <li>Manipulação de DOM e lógica de estados da aplicação</li>
-                <li>Interface responsiva e orientada à experiência do usuário</li>
-            </ul>
-
-            <h4 class="oculto">Principais Desafios</h4>
-            <ul class="oculto">
-                <li>Modelar um fluxo real de pedidos sem uso de frameworks</li>
-                <li>Gerenciar estado do carrinho e do pedido apenas com JavaScript</li>
-                <li>Garantir persistência de dados entre páginas utilizando localStorage</li>
-                <li>Desenvolver uma interface responsiva e orientada à experiência do usuário</li>
-            </ul>
-
-            <h4 class="oculto">Aprendizados</h4>
-            <ul class="oculto">
-                <li>Estruturação de lógica de aplicação em projetos Front-End</li>
-                <li>Manipulação avançada de DOM e estados da interface</li>
-                <li>Uso prático de localStorage para persistência de dados</li>
-                <li>Organização de código e separação de responsabilidades</li>
-            </ul>
+                <div class="projeto-infos">
+                    <div class="info-bloco">
+                        <h4 class="oculto stack">Stack</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">HTML</li>
+                            <li class="lista-projeto">CSS</li>
+                            <li class="lista-projeto">JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto funcionalidades">Funcionalidades</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Fluxo completo de pedido (cliente, carrinho e acompanhamento)</li>
+                            <li class="lista-projeto">Carrinho dinâmico com cálculo automático de valores</li>
+                            <li class="lista-projeto">Persistência de dados utilizando localStorage</li>
+                            <li class="lista-projeto">Manipulação de DOM e lógica de estados da aplicação</li>
+                            <li class="lista-projeto">Interface responsiva e orientada à experiência do usuário</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto desafios">Principais Desafios</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Modelar um fluxo real de pedidos sem uso de frameworks</li>
+                            <li class="lista-projeto">Gerenciar estado do carrinho e do pedido apenas com JavaScript</li>
+                            <li class="lista-projeto">Garantir persistência de dados entre páginas utilizando localStorage</li>
+                            <li class="lista-projeto">Desenvolver uma interface responsiva e orientada à experiência do usuário</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto aprendizados">Aprendizados</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Estruturação de lógica de aplicação em projetos Front-End</li>
+                            <li class="lista-projeto">Manipulação avançada de DOM e estados da interface</li>
+                            <li class="lista-projeto">Uso prático de localStorage para persistência de dados</li>
+                            <li class="lista-projeto">Organização de código e separação de responsabilidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <a href="https://github.com/devseravali/projeto-delivery"><button
                     class="btn-repositorio">Repositório</button></a>
@@ -339,228 +481,270 @@
 
         <article class="projeto">
             <figure>
-                <img src="src/images/gif/movie-flix-api.gif" alt="MovieFlix API">
+                <img class="projeto-img" src="src/images/gif/movie-flix-api.gif" alt="MovieFlix API">
                 <figcaption>Demonstração da API MovieFlix: catálogo de filmes, filtros e documentação Swagger
                 </figcaption>
             </figure>
 
-            <h3>MovieFlix API</h3>
-            <p>API REST de catálogo de filmes com CRUD completo, filtros por gênero e documentação via Swagger.</p>
-            <button onclick="mostrarDetalhes()">Ver Detalhes</button>
+            <h3 class="projeto-titulo">MovieFlix API</h3>
+            <p class="subtitulo-projeto">API REST de catálogo de filmes com CRUD completo,<br> filtros por gênero e
+                documentação via Swagger.</p>
+            <button onclick="mostrarDetalhes()" class="btn-detalhes">Ver Detalhes</button>
 
-            <h4 class="oculto">Stack</h4>
-            <ul class="oculto">
-                <li>Node.js</li>
-                <li>TypeScript</li>
-                <li>Express.js</li>
-                <li>PostgreSQL</li>
-                <li>Prisma ORM</li>
-                <li>Swagger</li>
-                <li>OpenAPI</li>
-            </ul>
+            <div class="projeto-infos">
 
-            <h4 class="oculto">Funcionalidades</h4>
-            <ul class="oculto">
-                <li>Gerenciamento completo de um catálogo de filmes (criação, consulta, atualização e exclusão)</li>
-                <li>Filtro de filmes por gênero para facilitar buscas específicas</li>
-                <li>Organização de rotas seguindo o padrão REST</li>
-                <li>Documentação interativa para facilitar o consumo e testes da API</li>
-                <li>Persistência de dados em banco relacional</li>
-            </ul>
+                <div class="projeto-infos">
+                    <div class="info-bloco">
+                        <h4 class="oculto stack">Stack</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Node.js</li>
+                            <li class="lista-projeto">TypeScript</li>
+                            <li class="lista-projeto">Express.js</li>
+                            <li class="lista-projeto">PostgreSQL</li>
+                            <li class="lista-projeto">Prisma ORM</li>
+                            <li class="lista-projeto">Swagger</li>
+                            <li class="lista-projeto">OpenAPI</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto funcionalidades">Funcionalidades</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Gerenciamento completo de um catálogo de filmes (criação, consulta, atualização e
+                                exclusão)</li>
+                            <li class="lista-projeto">Filtro de filmes por gênero para facilitar buscas específicas</li>
+                            <li class="lista-projeto">Organização de rotas seguindo o padrão REST</li>
+                            <li class="lista-projeto">Documentação interativa para facilitar o consumo e testes da API</li>
+                            <li class="lista-projeto">Persistência de dados em banco relacional</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto desafios">Principais Desafios</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Estruturar uma API REST consistente utilizando TypeScript</li>
+                            <li class="lista-projeto">Planejar corretamente o modelo de dados relacional</li>
+                            <li class="lista-projeto">Integrar o ORM ao banco de dados mantendo tipagem e segurança</li>
+                            <li class="lista-projeto">Organizar rotas e regras de negócio de forma clara e escalável</li>
+                            <li class="lista-projeto">Criar documentação técnica compreensível e funcional</li>
+                        </ul>
+                    </div>
+                    <div class="info-bloco">
+                        <h4 class="oculto aprendizados">Aprendizados</h4>
+                        <ul class="oculto">
+                            <li class="lista-projeto">Desenvolvimento prático de APIs REST completas</li>
+                            <li class="lista-projeto">Uso de TypeScript no backend para maior segurança e organização</li>
+                            <li class="lista-projeto">Integração entre aplicação e banco de dados relacional</li>
+                            <li class="lista-projeto">Criação e manutenção de documentação técnica com Swagger</li>
+                            <li class="lista-projeto">Importância da separação de responsabilidades em projetos Back-End</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <h4 class="oculto">Principais Desafios</h4>
-            <ul class="oculto">
-                <li>Estruturar uma API REST consistente utilizando TypeScript</li>
-                <li>Planejar corretamente o modelo de dados relacional</li>
-                <li>Integrar o ORM ao banco de dados mantendo tipagem e segurança</li>
-                <li>Organizar rotas e regras de negócio de forma clara e escalável</li>
-                <li>Criar documentação técnica compreensível e funcional</li>
-            </ul>
-
-            <h4 class="oculto">Aprendizados</h4>
-            <ul class="oculto">
-                <li>Desenvolvimento prático de APIs REST completas</li>
-                <li>Uso de TypeScript no backend para maior segurança e organização</li>
-                <li>Integração entre aplicação e banco de dados relacional</li>
-                <li>Criação e manutenção de documentação técnica com Swagger</li>
-                <li>Importância da separação de responsabilidades em projetos Back-End</li>
-            </ul>
-
-            <a href="https://github.com/devseravali/movieflix-api"><button>Repositório</button></a>
+            <a href="https://github.com/devseravali/movieflix-api"><button
+                    class="btn-repositorio">Repositório</button></a>
         </article>
 
         <article class="projeto">
             <figure>
-                <img src="src/images/gif/pokedex.gif" alt="PodeDex">
+                <img class="projeto-img" src="src/images/gif/pokedex.gif" alt="PodeDex">
                 <figcaption>Aplicação front-end que consome a PokéAPI para listar e exibir informações de Pokémon.
                 </figcaption>
             </figure>
 
-            <h3>Pokédex</h3>
-            <p>Aplicação front-end que consome uma API externa para listar e exibir informações de Pokémon, com foco em
-                interface moderna, organização de componentes e experiência do usuário.</p>
-            <button onclick="mostrarDetalhes()">Ver Detalhes</button>
+            <h3 class="projeto-titulo">Pokédex</h3>
+            <p class="subtitulo-projeto">Aplicação front-end que consome uma API externa para listar e exibir <br>
+                informações de Pokémon, com foco em
+                interface moderna, <br>organização de componentes e experiência do usuário.</p>
+            <button onclick="mostrarDetalhes()" class="btn-detalhes">Ver Detalhes</button>
 
-            <h4 class="oculto">Stack</h4>
-            <ul class="oculto">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PokéAPI</li>
-            </ul>
 
-            <h4 class="oculto">Funcionalidades</h4>
-            <ul class="oculto">
-                <li>Consumo de API externa para obtenção dos dados dos Pokémon</li>
-                <li>Listagem de Pokémon com informações detalhadas</li>
-                <li>Interface responsiva e organizada</li>
-                <li>Interação dinâmica com a interface</li>
-                <li>Organização visual clara para facilitar a navegação</li>
-            </ul>
+            <div class="projeto-infos">
+                <div class="info-bloco">
+                    <h4 class="oculto stack">Stack</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">HTML</li>
+                        <li class="lista-projeto">CSS</li>
+                        <li class="lista-projeto">JavaScript</li>
+                        <li class="lista-projeto">PokéAPI</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto funcionalidades">Funcionalidades</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Consumo de API externa para obtenção dos dados dos Pokémon</li>
+                        <li class="lista-projeto">Listagem de Pokémon com informações detalhadas</li>
+                        <li class="lista-projeto">Interface responsiva e organizada</li>
+                        <li class="lista-projeto">Interação dinâmica com a interface</li>
+                        <li class="lista-projeto">Organização visual clara para facilitar a navegação</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto desafios">Principais Desafios</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Consumir e tratar dados de uma API externa de forma eficiente</li>
+                        <li class="lista-projeto">Organizar a exibição das informações de maneira clara e intuitiva</li>
+                        <li class="lista-projeto">Manter a interface responsiva em diferentes tamanhos de tela</li>
+                        <li class="lista-projeto">Estruturar o código para facilitar manutenção e evolução</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto aprendizados">Aprendizados</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Estruturar o código para facilitar manutenção e evolução</li>
+                        <li class="lista-projeto">Manipulação de dados assíncronos</li>
+                        <li class="lista-projeto">Organização de componentes e lógica de interface</li>
+                        <li class="lista-projeto">Melhoria na estruturação de projetos Front-End</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h4 class="oculto">Principais Desafios</h4>
-            <ul class="oculto">
-                <li>Consumir e tratar dados de uma API externa de forma eficiente</li>
-                <li>Organizar a exibição das informações de maneira clara e intuitiva</li>
-                <li>Manter a interface responsiva em diferentes tamanhos de tela</li>
-                <li>Estruturar o código para facilitar manutenção e evolução</li>
-            </ul>
-
-            <h4 class="oculto">Aprendizados</h4>
-            <ul class="oculto">
-                <li>Estruturar o código para facilitar manutenção e evolução</li>
-                <li>Manipulação de dados assíncronos</li>
-                <li>Organização de componentes e lógica de interface</li>
-                <li>Melhoria na estruturação de projetos Front-End</li>
-            </ul>
-
-            <a href="https://github.com/devseravali/pokedex"><button>Repositório</button></a>
-            <a href="https://devseravali.github.io/pokedex/"><button>Demo</button></a>
+            <a href="https://github.com/devseravali/pokedex"><button class="btn-repositorio">Repositório</button></a>
+            <a href="https://devseravali.github.io/pokedex/"><button class="btn-demo">Demo</button></a>
         </article>
 
         <article class="projeto">
             <figure>
-                <img src="src/images/gif/pokedevs.gif" alt="PokéDevs">
+                <img class="projeto-img" src="src/images/gif/pokedevs.gif" alt="PokéDevs">
                 <figcaption> Interface interativa e responsiva do projeto PokéDevs, com cartões informativos dinâmicos.
                 </figcaption>
             </figure>
 
-            <h3>PokéDevs</h3>
-            <p>Aplicação web interativa e responsiva inspirada no universo Pokémon, com uma lista de “PokéDevs”
+            <h3 class="projeto-titulo">PokéDevs</h3>
+            <p class="subtitulo-projeto">Aplicação web interativa e responsiva inspirada no universo Pokémon, com uma<br>
+                lista de “PokéDevs”
                 (personagens fictícios) e alternância entre cartões informativos.</p>
-            <button onclick="mostrarDetalhes()">Ver Detalhes</button>
+            <button onclick="mostrarDetalhes()" class="btn-detalhes">Ver Detalhes</button>
 
-            <h4 class="oculto">Stack</h4>
-            <ul class="oculto">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Google Fonts (Poppins)</li>
-                <li>Markdown (documentação do projeto)</li>
-            </ul>
 
-            <h4 class="oculto">Funcionalidades</h4>
-            <ul class="oculto">
-                <li>Lista de personagens “PokéDevs” com cartões informativos</li>
-                <li>Alternância/seleção entre perfis para visualizar informações de cada personagem</li>
-                <li>Interface interativa com comportamento dinâmico (cliques e estados visuais)</li>
-            </ul>
+            <div class="projeto-infos">
+                <div class="info-bloco">
+                    <h4 class="oculto stack">Stack</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">HTML</li>
+                        <li class="lista-projeto">CSS</li>
+                        <li class="lista-projeto">JavaScript</li>
+                        <li class="lista-projeto">Google Fonts (Poppins)</li>
+                        <li class="lista-projeto">Markdown (documentação do projeto)</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto funcionalidades">Funcionalidades</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Lista de personagens “PokéDevs” com cartões informativos</li>
+                        <li class="lista-projeto">Alternância/seleção entre perfis para visualizar informações de cada personagem</li>
+                        <li class="lista-projeto">Interface interativa com comportamento dinâmico (cliques e estados visuais)</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto desafios">Principais Desafios</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Implementar a alternância entre cartões com JavaScript (eventos e controle de estados)</li>
+                        <li class="lista-projeto">Garantir responsividade e boa experiência em diferentes tamanhos de tela</li>
+                        <li class="lista-projeto">Organizar bem a separação de responsabilidades entre HTML, CSS e JavaScript</li>
+                        <li class="lista-projeto">Trabalhar estilização e animações/transições mantendo consistência visual</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto aprendizados">Aprendizados</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Manipulação de classes e eventos com JavaScript</li>
+                        <li class="lista-projeto">Estilização com Flexbox e uso de transições</li>
+                        <li class="lista-projeto">Práticas de acessibilidade e responsividade</li>
+                        <li class="lista-projeto">Separação de responsabilidades (HTML x CSS x JS)</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h4 class="oculto">Principais Desafios</h4>
-            <ul class="oculto">
-                <li>Implementar a alternância entre cartões com JavaScript (eventos e controle de estados)</li>
-                <li>Garantir responsividade e boa experiência em diferentes tamanhos de tela</li>
-                <li>Organizar bem a separação de responsabilidades entre HTML, CSS e JavaScript</li>
-                <li>Trabalhar estilização e animações/transições mantendo consistência visual</li>
-            </ul>
-
-            <h4 class="oculto">Aprendizados</h4>
-            <ul class="oculto">
-                <li>Manipulação de classes e eventos com JavaScript</li>
-                <li>Estilização com Flexbox e uso de transições</li>
-                <li>Práticas de acessibilidade e responsividade</li>
-                <li>Separação de responsabilidades (HTML x CSS x JS)</li>
-            </ul>
-
-            <a href="https://github.com/devseravali/projeto-pokedevs"><button>Repositório</button></a>
-            <a href="https://devseravali.github.io/projeto-pokedevs/"><button>Demo</button></a>
+            <a href="https://github.com/devseravali/projeto-pokedevs"><button
+                    class="btn-repositorio">Repositório</button></a>
+            <a href="https://devseravali.github.io/projeto-pokedevs/"><button class="btn-demo">Demo</button></a>
         </article>
 
 
         <article class="projeto">
             <figure>
-                <img src="src/images/gif/anime-app.gif" alt="Anime App">
+                <img class="projeto-img" src="src/images/gif/anime-app.gif" alt="Anime App">
                 <figcaption>Interface interativa do Anime Radar com filtros e organização por categorias.</figcaption>
             </figure>
 
-            <h3>Anime Radar</h3>
-            <p>Aplicação front-end interativa para listagem e visualização de animes, com filtros personalizados,
+            <h3 class="projeto-titulo">Anime Radar</h3>
+            <p class="subtitulo-projeto">Aplicação front-end interativa para listagem e visualização de animes, com
+               <br> filtros personalizados,
                 organização por categorias e foco em experiência do usuário.</p>
-            <button onclick="mostrarDetalhes()">Ver Detalhes</button>
+            <button onclick="mostrarDetalhes()" class="btn-detalhes">Ver Detalhes</button>
 
-            <h4 class="oculto">Stack</h4>
-            <ul class="oculto">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Manipulação de DOM</li>
-                <li>Estilização com foco em responsividade e temas</li>
-            </ul>
+            <div class="projeto-infos">
+                <div class="info-bloco">
+                    <h4 class="oculto stack">Stack</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">HTML</li>
+                        <li class="lista-projeto">CSS</li>
+                        <li class="lista-projeto">JavaScript</li>
+                        <li class="lista-projeto">Manipulação de DOM</li>
+                        <li class="lista-projeto">Estilização com foco em responsividade e temas</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto funcionalidades">Funcionalidades</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Listagem de animes com informações organizadas</li>
+                        <li class="lista-projeto">Filtros por categorias e critérios definidos</li>
+                        <li class="lista-projeto">Interface dinâmica e responsiva</li>
+                        <li class="lista-projeto">Organização visual para facilitar a navegação e descoberta de conteúdo</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto desafios">Principais Desafios</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Implementar filtros dinâmicos utilizando apenas JavaScript</li>
+                        <li class="lista-projeto">Gerenciar estado da interface (filtros e tema)</li>
+                        <li class="lista-projeto">Manter organização do código em uma aplicação interativa</li>
+                        <li class="lista-projeto">Garantir boa experiência do usuário em diferentes dispositivos</li>
+                    </ul>
+                </div>
+                <div class="info-bloco">
+                    <h4 class="oculto aprendizados">Aprendizados</h4>
+                    <ul class="oculto">
+                        <li class="lista-projeto">Criação de interfaces interativas com JavaScript puro</li>
+                        <li class="lista-projeto">Implementação de filtros e controle de estado no front-end</li>
+                        <li class="lista-projeto">Organização de lógica e dados em aplicações Front-End</li>
+                        <li class="lista-projeto">Melhoria na experiência do usuário por meio de temas e interação</li>
+                        <li class="lista-projeto">Práticas de acessibilidade e responsividade</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h4 class="oculto">Funcionalidades</h4>
-            <ul class="oculto">
-                <li>Listagem de animes com informações organizadas</li>
-                <li>Filtros por categorias e critérios definidos</li>
-                <li>Interface dinâmica e responsiva</li>
-                <li>Organização visual para facilitar a navegação e descoberta de conteúdo</li>
-            </ul>
-
-            <h4 class="oculto">Principais Desafios</h4>
-            <ul class="oculto">
-                <li>Implementar filtros dinâmicos utilizando apenas JavaScript</li>
-                <li>Gerenciar estado da interface (filtros e tema)</li>
-                <li>Manter organização do código em uma aplicação interativa</li>
-                <li>Garantir boa experiência do usuário em diferentes dispositivos</li>
-            </ul>
-
-            <h4 class="oculto">Aprendizados</h4>
-            <ul class="oculto">
-                <li>Criação de interfaces interativas com JavaScript puro</li>
-                <li>Implementação de filtros e controle de estado no front-end</li>
-                <li>Organização de lógica e dados em aplicações Front-End</li>
-                <li>Melhoria na experiência do usuário por meio de temas e interação</li>
-                <li>Práticas de acessibilidade e responsividade</li>
-            </ul>
-
-            <a href="https://github.com/devseravali/projeto-anime-app"><button>Repositório</button></a>
-            <a href="https://devseravali.github.io/projeto-anime-app/"><button>Demo</button></a>
+            <a href="https://github.com/devseravali/projeto-anime-app"><button
+                    class="btn-repositorio">Repositório</button></a>
+            <a href="https://devseravali.github.io/projeto-anime-app/"><button class="btn-demo">Demo</button></a>
         </article>
     </section>
 
     <section class="contato" id="contato">
-        <h2>Contato</h2>
-        <p>Estou aberta a novas oportunidades e conexões na área de desenvolvimento Full Stack. Se você deseja
+        <h2 class="contato-titulo">Contato</h2>
+        <p class="contato-paragrafo">Estou aberta a novas oportunidades e conexões na área de desenvolvimento Full Stack. Se você deseja
+            <br>
             colaborar, discutir projetos ou simplesmente trocar ideias sobre tecnologia, sinta-se à vontade para entrar
             em contato comigo!</p>
-        <a href="https://wa.me/5511961727061?Ol%C3%A1%2C%20Aline!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20vaga%20j%C3%BAnior%20ou%20um%20projeto%20freelance%20na%20%C3%A1rea%20de%20desenvolvimento"
+        <a class="whatsapp" href="https://wa.me/5511961727061?Ol%C3%A1%2C%20Aline!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20vaga%20j%C3%BAnior%20ou%20um%20projeto%20freelance%20na%20%C3%A1rea%20de%20desenvolvimento"
             target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
 
-        <a href="mailto:devseravali@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a class="email" href="mailto:devseravali@gmail.com" target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-envelope"></i> Enviar e-mail</a>
 
-        <a href="https://www.linkedin.com/in/dev-seravali/" target="_blank" rel="noopener noreferrer"><i
+        <a class="linkedin" href="https://www.linkedin.com/in/dev-seravali/" target="_blank" rel="noopener noreferrer"><i
                 class="fa-brands fa-linkedin"></i> LinkedIn</a>
     </section>
 
     <footer class="footer">
-        <p>© 2026 Dev Seravali. Todos os direitos reservados.</p>
+        <p class="footer-texto">© 2026 Dev Seravali. Todos os direitos reservados.</p>
 
         <div class="footer-links">
-            <a href="https://github.com/devseravali"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dev-seravali/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/@devseravali"><i class="fa-brands fa-youtube"></i></a>
+            <a class="footer-github" href="https://github.com/devseravali"><i class="fa-brands fa-github"></i></a>
+            <a class="footer-linkedin" href="https://www.linkedin.com/in/dev-seravali/"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="footer-youtube" href="https://www.youtube.com/@devseravali"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </footer>
 
