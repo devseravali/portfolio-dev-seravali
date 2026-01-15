@@ -632,3 +632,7 @@ figcaption {
     color: var(--btn-texto-hover-curriculo);
     transform: translateY(-1px);
 }
+
+.btn-menu {
+    display: none;
+}
