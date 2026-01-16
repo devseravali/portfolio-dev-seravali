@@ -677,7 +677,7 @@
                     width: 100%;
                 }
 
-                .stack, 
+                .stack,
                 .funcionalidades,
                 .desafios,
                 .aprendizados {
@@ -691,10 +691,47 @@
 
             }
 
+            @media (max-width: 1100px) {
+                .projeto-infos {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                    align-items: center;
+                }
+
+                .titulo,
+                .sobre-mim .projeto-titulo,
+                .titulo-skill,
+                .contato-titulo {
+                    font-size: 1.3rem;
+                }
+
+                .skil-card {
+                    font-size: 0.7rem;
+                    padding: 0.6rem;
+                }
+
+                .button-skill {
+                    font-size: 0.8rem;
+                }
+
+                .footer {
+                    font-size: 0.8rem;
+                    padding: 1rem;
+                }
+
+                .footer-texto {
+                    font-size: 0.8rem;
+                }
+
+                .footer-links {
+                    font-size: 0.9rem;
+                }
+            }
+
 
 
             /*
 
-@media (max-width: 1200px) {}
 
 @media (min-width: 1400px) {} */
