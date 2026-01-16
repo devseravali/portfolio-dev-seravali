@@ -1,0 +1,358 @@
+            @media (min-width: 395px) and (max-width: 576px) {
+
+                .container-header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.5rem;
+                    padding: 1rem;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .menu {
+                    display: none;
+                }
+
+                .menu.ativo {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 60px;
+                    right: 20px;
+                    background: var(--bg-header);
+                    padding: 1rem 2rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    z-index: var(--z-menu);
+                }
+
+                .menu li {
+                    margin: 0.5rem 0;
+                }
+
+                .logo {
+                    position: static;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: auto;
+                    margin: 0 auto;
+                }
+
+                .logo-img {
+                    max-width: 80px;
+                    max-height: 80px;
+                    margin-bottom: 0.5rem;
+                    display: block;
+                    margin-left: 0.5rem;
+                    margin-right: 0.5rem;
+                    margin-top: 1.5rem;
+                }
+
+                .header-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 0;
+                    position: relative;
+                    min-height: 3.5rem;
+                }
+
+                .header-row>.btn-toggle-theme {
+                    position: absolute;
+                    left: 0;
+                    right: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1;
+                    margin-left: 0.5rem;
+                }
+
+                .header-row>.btn-menu,
+                .header-row>.btn-menu-fechar {
+                    position: absolute;
+                    right: 0;
+                    left: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    z-index: 2;
+                }
+
+                .btn-menu,
+                .btn-menu-fechar {
+                    background: none;
+                    border: none;
+                    color: var(--cor-titulo);
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    cursor: pointer;
+                }
+
+                .btn-menu:focus,
+                .btn-menu-fechar:focus {
+                    outline: 2px solid var(--cor-titulo);
+                    outline-offset: 2px;
+                }
+
+                .btn-menu:hover,
+                .btn-menu-fechar:hover {
+                    color: var(--btn-bg-hover-curriculo);
+                }
+
+                .btn-toggle-theme {
+                    margin: 0;
+                }
+
+                .foto-principal {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .titulo {
+                    font-size: 1.5rem;
+                    margin-top: 0.5rem;
+                }
+
+                .subtitulo {
+                    font-size: 1rem;
+                }
+
+                .profissional {
+                    font-size: 0.8rem;
+                }
+
+                .botoes-hero {
+                    gap: 0.5rem;
+                }
+
+                .btn,
+                .btn-social,
+                .btn-curriculo {
+                    font-size: 0.8rem;
+                }
+
+                .sobre {
+                    padding: 1.5rem 1rem;
+                }
+
+                .sobre-mim {
+                    font-size: 1.5rem;
+                }
+
+                .sobre-texto {
+                    font-size: 0.9rem;
+                }
+
+                .skills {
+                    padding: 2rem 2rem;
+                }
+
+                .header-skills {
+                    font-size: 1.5rem;
+                }
+
+
+                .header-skills {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .titulo-skill {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .subtitulo-skill {
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-top: 0;
+                    padding-bottom: 0;
+                }
+
+                .ilha-titulo {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.05rem;
+                }
+
+                .skil-card {
+                    font-size: 1rem;
+                    padding: 1rem;
+                }
+
+                .button-skill {
+                    font-size: 0.8rem;
+                    padding: 0.4rem 0.8rem;
+                }
+
+                .nivel {
+                    font-size: 0.9rem;
+                }
+
+                .conteudo {
+                    gap: 1.5rem;
+                    padding: 1rem;
+                }
+
+                .conteudo-titulo {
+                    font-size: 1.2rem;
+                }
+
+                .paragrafo-conteudo {
+                    font-size: 0.9rem;
+                }
+
+                .video-canal {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .video-canal iframe,
+                .video-canal video {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+
+                .canal {
+                    padding: 1rem;
+                    font-size: 0.9rem;
+                }
+
+                .projetos {
+                    padding: 2rem 1rem;
+                }
+
+                .projetos-titulo {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                }
+
+                .projeto-img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                figcaption.projeto-descricao {
+                    font-size: 0.5rem;
+                }
+
+                .projeto-titulo {
+                    font-size: 1.2rem;
+                }
+
+                .subtitulo-projeto {
+                    font-size: 0.8rem;
+                }
+
+                .projetos-infos {
+                    font-size: 0.7rem;
+                }
+
+                .info-bloco {
+                    font-size: 0.8rem;
+                    width: 100%;
+                    max-width: 250px;
+                    min-width: 100px;
+                    padding: 1.5rem 1.5rem;
+                    margin-bottom: 0;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .stack,
+                .funcionalidades,
+                .desafios,
+                .aprendizados {
+                    font-size: 1rem;
+                    padding-bottom: 0.5rem;
+                    text-align: center;
+                }
+
+                .lista-projeto {
+                    font-size: 0.8rem;
+                    text-align: center;
+                    gap: 2rem;
+                }
+
+                .btn-detalhes,
+                .btn-repositorio,
+                .btn-demo {
+                    font-size: 0.8rem;
+                    padding: 0.4rem 0.8rem;
+                    margin: 1rem 0.2rem 0 0.2rem;
+                }
+
+                .contato {
+                    padding: 2rem 1rem;
+                }
+
+                .contato-titulo {
+                    font-size: 1.5rem;
+                }
+
+                .contato-paragrafo {
+                    font-size: 0.9rem;
+                }
+
+                .whatsapp,
+                .email,
+                .linkedin {
+                    font-size: 0.9rem;
+                    margin: 0 0.2rem;
+                    padding-bottom: 0;
+                }
+
+                .footer {
+                    font-size: 0.8rem;
+                    padding: 1rem;
+                }
+
+                .footer-texto {
+                    font-size: 0.8rem;
+                }
+
+                .footer-github,
+                .footer-linkedin,
+                .footer-youtube {
+                    font-size: 1.2rem;
+                    margin: 0 0.2rem;
+                }
+
+                .footer-links {
+                    font-size: 0.9rem;
+                }
+
+                .voltar-ao-topo {
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                }
+
+            }
+
+
+            /*
+            @media (max-width: 768px) {}
+             @media (max-width: 992px) {}
+
+@media (max-width: 1200px) {}
+
+@media (min-width: 1400px) {} */
