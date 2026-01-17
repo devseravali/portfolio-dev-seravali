@@ -308,6 +308,27 @@ body {
     display: none;
 }
 
+.descricao-skill {
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    background: var(--bg-header);
+    width: 160px;
+    height: 160px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    box-shadow: var(--sombra-leve);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-ilha .descricao-skill {
+    margin-top: 1.2rem;
+}
+
 
 .button-skill {
     background: none;
