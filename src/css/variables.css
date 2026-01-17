@@ -35,49 +35,49 @@
 
 :root,
 body.theme-light {
-    --cor-principal: #5a0f0f;
-    --cor-secundaria: #8b1414;
-    --cor-titulo: #d4af37;
-    --cor-dourado-hover: #b8962e;
+    --cor-principal: #7a1414;
+    --cor-secundaria: #b8962e;
+    --cor-titulo: #5a0f0f;
+    --cor-dourado-hover: #a98989;
 
-    --bg-body: #160f0f;
-    --bg-header: linear-gradient(135deg, #5a0f0f, #3a0d0d);
-    --bg-section: #1b1313;
-    --bg-card: #241a1a;
-    --bg-footer: #110909;
+    --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
+    --bg-section: linear-gradient(135deg, #f5f5f5 0%, #d9c2c2 100%);
+    --bg-card: linear-gradient(135deg, #fff8e1 0%, #a98989 100%);
+    --bg-footer: linear-gradient(135deg, #a98989 0%, #5a0f0f 100%);
 
-    --texto-principal: #f3e9e9;
-    --texto-secundario: #d9c2c2;
-    --texto-muted: #a98989;
-    --texto-normal: #f5f5f5;
-    --texto-invertido: #120202;
+    --texto-principal: #2b0606;
+    --texto-secundario: #5a0f0f;
+    --texto-muted: #7a1414;
+    --texto-normal: #3a0d0d;
+    --texto-invertido: #fff8e1;
 
-    --link: var(--cor-titulo);
+    --link: #7a1414;
+    --link-hover: #b8962e;
 
-
-    --btn-bg: var(--cor-titulo);
-    --btn-bg-hover: var(--cor-dourado-hover);
-    --btn-texto: #120202;
-    --btn-texto-hover: #120202;
-    --btn-bg-hover-curriculo: #2b0606;
-    --btn-texto-hover-curriculo: var(--cor-dourado-hover);
-    --btn-borda: transparent;
+    --btn-bg: #5a0f0f;
+    --btn-bg-hover: #b8962e;
+    --btn-texto: #fff8e1;
+    --btn-texto-hover: #fff8e1;
+    --btn-bg-hover-curriculo: #a98989;
+    --btn-texto-hover-curriculo: #5a0f0f;
+    --btn-borda: 1px solid #7a1414;
 
     --card-bg: var(--bg-card);
-    --card-borda: #3a0d0d;
-    --card-hover: #2e2222;
+    --card-borda: #a98989;
+    --card-hover: #d9c2c2;
 
-    --filtro-bg: #2a1d1d;
-    --filtro-texto: #f3e9e9;
-    --filtro-ativo-bg: var(--cor-titulo);
-    --filtro-ativo-texto: #120202;
+    --filtro-bg: #fff8e1;
+    --filtro-texto: #5a0f0f;
+    --filtro-ativo-bg: #b8962e;
+    --filtro-ativo-texto: #fff8e1;
 
-    --nivel-bg: var(--cor-titulo);
-    --nivel-texto: #120202;
+    --nivel-bg: #b8962e;
+    --nivel-texto: #5a0f0f;
 
-    --img-borda: var(--cor-titulo);
-    --topo-bg: var(--cor-titulo);
-    --topo-hover: var(--cor-dourado-hover);
+    --img-borda: #b8962e;
+    --topo-bg: #5a0f0f;
+    --topo-hover: #b8962e;
 }
 
 body.theme-dark {
@@ -86,11 +86,11 @@ body.theme-dark {
     --cor-titulo: #e6c158;
     --cor-dourado-hover: #c9a63d;
 
-    --bg-body: #0e0c0c;
-    --bg-header: linear-gradient(135deg, #2b0606, #151010);
-    --bg-section: #141010;
-    --bg-card: #1b1515;
-    --bg-footer: #070606;
+    --bg-body: linear-gradient(135deg, #0e0c0c 0%, #2b0606 100%);
+    --bg-header: linear-gradient(135deg, #2b0606 0%, #151010 100%);
+    --bg-section: linear-gradient(135deg, #141010 0%, #241a1a 100%);
+    --bg-card: linear-gradient(135deg, #1b1515 0%, #2a1d1d 100%);
+    --bg-footer: linear-gradient(135deg, #070606 0%, #1b1515 100%);
 
     --texto-principal: #f4eeee;
     --texto-secundario: #d3c1c1;
