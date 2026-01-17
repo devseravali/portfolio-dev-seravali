@@ -26,6 +26,7 @@ function initThemeToggle() {
     icon.classList.toggle('fa-sun', body.classList.contains('theme-dark'));
     icon.classList.toggle('fa-moon', !body.classList.contains('theme-dark'));
   }
+  localStorage.clear();
 }
 
 function initMenuMobile() {
@@ -125,10 +126,7 @@ function initSkills() {
       document.querySelectorAll('.skill-card.expanded').forEach((btn) => {
         btn.classList.remove('expanded');
         const openDesc = btn.nextElementSibling;
-        if (
-          openDesc &&
-          openDesc.classList.contains('descricao-skill')
-        ) {
+        if (openDesc && openDesc.classList.contains('descricao-skill')) {
           openDesc.remove();
         }
       });
@@ -144,9 +142,59 @@ function initSkills() {
   });
 }
 
+function toggleSkillDescricao(skill) {
+  document.querySelectorAll('.skill-card.expanded').forEach((btn) => {
+    btn.classList.remove('expanded');
+    const openDesc = btn.nextElementSibling;
+    if (openDesc && openDesc.classList.contains('descricao-skill')) {
+      openDesc.remove();
+    }
+  });
+
+  if (skill.classList.contains('expanded')) return;
+
+  const descricao = skill.getAttribute('data-descricao');
+  if (descricao) {
+    const descDiv = document.createElement('div');
+    descDiv.className = 'descricao-skill';
+    descDiv.textContent = descricao;
+    skill.insertAdjacentElement('afterend', descDiv);
+    skill.classList.add('expanded');
+  }
+}
+
+function closeAllSkillDescricoes() {
+  document
+    .querySelectorAll('.skill-card.expanded')
+    .forEach((btn) => btn.classList.remove('expanded'));
+  document
+    .querySelectorAll('.descricao-skill')
+    .forEach((desc) => desc.remove());
+}
+
+function scrollToTop() {
+  const header = document.querySelector('header');
+  const voltarAoTopoBtn = document.querySelector('.voltar-ao-topo');
+  if (voltarAoTopoBtn) {
+    voltarAoTopoBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToHeader();
+    });
+  }
+
+  function scrollToHeader() {
+    if (header) {
+      header.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMenuMobile();
   initProjetos();
   initSkills();
+  toggleSkillDescricao();
+  closeAllSkillDescricoes();
+  scrollToTop();
 });
