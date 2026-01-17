@@ -26,7 +26,6 @@ function initThemeToggle() {
     icon.classList.toggle('fa-sun', body.classList.contains('theme-dark'));
     icon.classList.toggle('fa-moon', !body.classList.contains('theme-dark'));
   }
-  localStorage.clear();
 }
 
 function initMenuMobile() {
@@ -194,7 +193,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenuMobile();
   initProjetos();
   initSkills();
-  toggleSkillDescricao();
-  closeAllSkillDescricoes();
   scrollToTop();
 });
