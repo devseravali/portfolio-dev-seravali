@@ -111,8 +111,42 @@ function fecharDetalhes(blocos, btn) {
   btn.textContent = 'Ver detalhes';
 }
 
+function initSkills() {
+  const skills = document.querySelectorAll('.skill-card');
+  skills.forEach((skill) => {
+    let descDiv = null;
+    skill.addEventListener('click', function () {
+      if (descDiv && descDiv.parentNode) {
+        descDiv.parentNode.removeChild(descDiv);
+        descDiv = null;
+        skill.classList.remove('expanded');
+        return;
+      }
+      document.querySelectorAll('.skill-card.expanded').forEach((btn) => {
+        btn.classList.remove('expanded');
+        const openDesc = btn.nextElementSibling;
+        if (
+          openDesc &&
+          openDesc.classList.contains('descricao-skill')
+        ) {
+          openDesc.remove();
+        }
+      });
+      const descricao = skill.getAttribute('data-descricao');
+      if (descricao) {
+        descDiv = document.createElement('div');
+        descDiv.className = 'descricao-skill';
+        descDiv.textContent = descricao;
+        skill.insertAdjacentElement('afterend', descDiv);
+        skill.classList.add('expanded');
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMenuMobile();
   initProjetos();
+  initSkills();
 });
