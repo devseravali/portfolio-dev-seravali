@@ -40,7 +40,7 @@ body.theme-light {
     --cor-dourado-hover: #a98989;
 
     --btn-contato-hover-bg: #b8962e;
-    --btn-contato-hover-texto: #fff; 
+    --btn-contato-hover-texto: #fff;
 
     --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
@@ -62,7 +62,7 @@ body.theme-light {
     --btn-texto: #fff8e1;
     --btn-texto-hover: #fff8e1;
     --btn-bg-hover-curriculo: #a98989;
-    --btn-texto-hover-curriculo: #5a0f0f;
+    --btn-texto-hover-curriculo: #fff;
     --btn-borda: 1px solid #7a1414;
     --card-borda: #a98989;
     --card-hover: #d9c2c2;
@@ -104,8 +104,8 @@ body.theme-dark {
     --btn-bg-hover: var(--cor-dourado-hover);
     --btn-texto: #0e0c0c;
     --btn-texto-hover: #0e0c0c;
-    --btn-bg-hover-curriculo: #0e0c0c;
-    --btn-texto-hover-curriculo: var(--cor-dourado-hover);
+    --btn-bg-hover-curriculo: #c9a63d;
+    --btn-texto-hover-curriculo: #0e0c0c;
     --btn-borda: transparent;
 
     --card-bg: var(--bg-card);

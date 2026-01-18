@@ -85,6 +85,37 @@ body {
     cursor: pointer;
 }
 
+.btn-contato {
+    color: var(--texto-principal);
+    border: var(--btn-borda);
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    transition: background var(--transicao), color var(--transicao), border-color var(--transicao), transform var(--transicao-rapida);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin: 0;
+}
+
+body .btn.btn-contato:hover,
+.btn.btn-contato:hover,
+.btn-contato:hover {
+    background: var(--btn-bg-hover-curriculo);
+    color: var(--btn-texto-hover-curriculo) !important;
+    border-color: var(--btn-borda);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    text-decoration: none;
+}
+
 .btn:hover {
     background: var(--btn-bg-hover-curriculo);
     color: var(--btn-texto-hover-curriculo);
@@ -636,33 +667,4 @@ figcaption {
     margin: 0 auto;
     font-weight: 400;
     text-align: center;
-}
-
-.btn-contato {
-    color: var(--btn-texto);
-    border: var(--btn-borda);
-    padding: 0.7rem 1.5rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    transition: background var(--transicao), color var(--transicao), border-color var(--transicao), transform var(--transicao-rapida);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    letter-spacing: 0.5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    margin: 0;
-}
-
- .btn-contato:hover {
-    background: var(--btn-contato-hover-bg);
-    color: var(--cor-titulo);
-    border-color: var(--btn-borda);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
-    text-decoration: none;
 }
