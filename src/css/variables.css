@@ -33,12 +33,14 @@
     --opacidade-desativado: 0.6;
 }
 
-:root,
 body.theme-light {
     --cor-principal: #7a1414;
     --cor-secundaria: #b8962e;
     --cor-titulo: #5a0f0f;
     --cor-dourado-hover: #a98989;
+
+    --btn-contato-hover-bg: #b8962e;
+    --btn-contato-hover-texto: #fff; 
 
     --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
@@ -81,6 +83,9 @@ body.theme-dark {
     --cor-secundaria: #7a1414;
     --cor-titulo: #e6c158;
     --cor-dourado-hover: #c9a63d;
+
+    --btn-contato-hover-bg: #7a1414;
+    --btn-contato-hover-texto: #fff;
 
     --bg-body: linear-gradient(135deg, #0e0c0c 0%, #2b0606 100%);
     --bg-header: linear-gradient(135deg, #2b0606 0%, #151010 100%);
