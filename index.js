@@ -219,11 +219,41 @@ function validarEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+document
+  .getElementById('newsletter-form')
+  .addEventListener('submit', function (e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('email-newlestter');
+    const email = emailInput.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert('Por favor, insira um e-mail válido.');
+      return;
+    }
+    fetch(
+      'https://script.google.com/macros/s/AKfycbwLKaI2iI1MYvg6MRV-Ks5AzML1nfb78bqy5XI8j6TmHkpWcrTeUWZq4cW1m0Hkx-g9/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/json' },
+      },
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.result === 'success') {
+          alert('Inscrição realizada com sucesso!');
+          emailInput.value = '';
+        } else {
+          alert('Erro ao salvar inscrição.');
+        }
+      })
+      .catch(() => alert('Erro ao conectar com o servidor.'));
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
-  initMenuMobile();
-  initProjetos();
-  initSkills();
-  scrollToTop();
-  newletterSubscription();
-});
+    initThemeToggle();
+    initMenuMobile();
+    initProjetos();
+    initSkills();
+    scrollToTop();
+    newletterSubscription();
+  });
