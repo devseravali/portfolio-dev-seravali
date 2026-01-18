@@ -218,7 +218,6 @@ function newletterSubscription() {
 }
 
 function validarEmail(email) {
-  // Regex simples para validação de e-mail
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
@@ -228,4 +227,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjetos();
   initSkills();
   scrollToTop();
+  newletterSubscription();
 });
