@@ -33,14 +33,15 @@
     --opacidade-desativado: 0.6;
 }
 
+:root,
 body.theme-light {
     --cor-principal: #7a1414;
     --cor-secundaria: #b8962e;
     --cor-titulo: #5a0f0f;
     --cor-dourado-hover: #a98989;
 
-    --btn-contato-hover-bg: #b8962e;
-    --btn-contato-hover-texto: #fff;
+    --newsletter-sucesso: #1b8836;
+    --newsletter-erro: #c0392b;
 
     --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
@@ -62,8 +63,10 @@ body.theme-light {
     --btn-texto: #fff8e1;
     --btn-texto-hover: #fff8e1;
     --btn-bg-hover-curriculo: #a98989;
-    --btn-texto-hover-curriculo: #fff;
+    --btn-texto-hover-curriculo: #5a0f0f;
     --btn-borda: 1px solid #7a1414;
+    --newsletter-sucesso: #2e7d32;
+    --newsletter-erro: #b71c1c;
     --card-borda: #a98989;
     --card-hover: #d9c2c2;
 
@@ -76,6 +79,8 @@ body.theme-light {
     --nivel-texto: #5a0f0f;
 
     --img-borda: #b8962e;
+    --topo-bg: #5a0f0f;
+    --topo-hover: #b8962e;
 }
 
 body.theme-dark {
@@ -84,8 +89,8 @@ body.theme-dark {
     --cor-titulo: #e6c158;
     --cor-dourado-hover: #c9a63d;
 
-    --btn-contato-hover-bg: #7a1414;
-    --btn-contato-hover-texto: #fff;
+    --newsletter-sucesso: #3be37a;
+    --newsletter-erro: #ff4d57;
 
     --bg-body: linear-gradient(135deg, #0e0c0c 0%, #2b0606 100%);
     --bg-header: linear-gradient(135deg, #2b0606 0%, #151010 100%);
@@ -95,6 +100,8 @@ body.theme-dark {
 
     --texto-principal: #f4eeee;
     --texto-secundario: #d3c1c1;
+    --texto-muted: #9f8686;
+    --texto-normal: #f5f5f5;
     --texto-invertido: #0e0c0c;
 
     --link: var(--cor-titulo);
@@ -104,8 +111,8 @@ body.theme-dark {
     --btn-bg-hover: var(--cor-dourado-hover);
     --btn-texto: #0e0c0c;
     --btn-texto-hover: #0e0c0c;
-    --btn-bg-hover-curriculo: #c9a63d;
-    --btn-texto-hover-curriculo: #0e0c0c;
+    --btn-bg-hover-curriculo: #0e0c0c;
+    --btn-texto-hover-curriculo: var(--cor-dourado-hover);
     --btn-borda: transparent;
 
     --card-bg: var(--bg-card);
@@ -114,6 +121,8 @@ body.theme-dark {
 
     --filtro-bg: #1f1818;
     --filtro-texto: #f4eeee;
+    --filtro-ativo-bg: var(--cor-titulo);
+    --filtro-ativo-texto: #0e0c0c;
 
     --nivel-bg: var(--cor-titulo);
     --nivel-texto: #0e0c0c;
