@@ -209,7 +209,9 @@ function newletterSubscription() {
       emailInput.focus();
       return;
     }
-    // Permite o envio real para o Formspree se o e-mail for válido
+    msgDiv.textContent = 'Inscrição realizada com sucesso!';
+    msgDiv.classList.add('sucesso');
+    form.reset();
   });
 }
 
