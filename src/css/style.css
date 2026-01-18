@@ -613,6 +613,94 @@ figcaption {
     color: var(--link-hover);
 }
 
+.newlestter {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--bg-section);
+}
+
+.newlestter-titulo {
+    font-size: 2rem;
+    color: var(--cor-titulo);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.newlestter-paragrafo {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+.form-newlestter {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.label-newlestter {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--texto-normal);
+    font-weight: 600;
+}
+
+.input-newlestter {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.7rem 1rem;
+    border: var(--borda-fina) var(--card-borda);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--texto-normal);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.input-newlestter:focus {
+    outline: 2px solid var(--cor-titulo);
+    outline-offset: 2px;
+}
+
+.btn-newsletter {
+    background: var(--btn-bg);
+    color: var(--btn-texto);
+    border: var(--btn-borda);
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background var(--transicao), color var(--transicao), transform var(--transicao-rapida);
+    cursor: pointer;
+}
+
+.btn-newsletter:hover {
+    background: var(--btn-bg-hover-curriculo);
+    color: var(--btn-texto-hover-curriculo);
+    transform: translateY(-1px);
+}
+
+.newsletter-msg {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.newsletter-msg.sucesso {
+    color: var(--newsletter-sucesso);
+}
+
+.newsletter-msg.erro {
+    color: var(--newsletter-erro);
+}
+
 .footer {
     text-align: center;
     font-size: 0.9rem;
@@ -671,4 +759,15 @@ figcaption {
 .btn-menu,
 .btn-menu-fechar {
     display: none;
+}
+
+.label-newsletter {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
