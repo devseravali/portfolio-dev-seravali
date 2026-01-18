@@ -40,9 +40,6 @@ body.theme-light {
     --cor-titulo: #5a0f0f;
     --cor-dourado-hover: #a98989;
 
-    --newsletter-sucesso: #1b8836;
-    --newsletter-erro: #c0392b;
-
     --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
     --bg-section: linear-gradient(135deg, #f5f5f5 0%, #d9c2c2 100%);
@@ -65,8 +62,6 @@ body.theme-light {
     --btn-bg-hover-curriculo: #a98989;
     --btn-texto-hover-curriculo: #5a0f0f;
     --btn-borda: 1px solid #7a1414;
-    --newsletter-sucesso: #2e7d32;
-    --newsletter-erro: #b71c1c;
     --card-borda: #a98989;
     --card-hover: #d9c2c2;
 
@@ -79,8 +74,6 @@ body.theme-light {
     --nivel-texto: #5a0f0f;
 
     --img-borda: #b8962e;
-    --topo-bg: #5a0f0f;
-    --topo-hover: #b8962e;
 }
 
 body.theme-dark {
@@ -88,9 +81,6 @@ body.theme-dark {
     --cor-secundaria: #7a1414;
     --cor-titulo: #e6c158;
     --cor-dourado-hover: #c9a63d;
-
-    --newsletter-sucesso: #3be37a;
-    --newsletter-erro: #ff4d57;
 
     --bg-body: linear-gradient(135deg, #0e0c0c 0%, #2b0606 100%);
     --bg-header: linear-gradient(135deg, #2b0606 0%, #151010 100%);
@@ -100,8 +90,6 @@ body.theme-dark {
 
     --texto-principal: #f4eeee;
     --texto-secundario: #d3c1c1;
-    --texto-muted: #9f8686;
-    --texto-normal: #f5f5f5;
     --texto-invertido: #0e0c0c;
 
     --link: var(--cor-titulo);
@@ -121,8 +109,6 @@ body.theme-dark {
 
     --filtro-bg: #1f1818;
     --filtro-texto: #f4eeee;
-    --filtro-ativo-bg: var(--cor-titulo);
-    --filtro-ativo-texto: #0e0c0c;
 
     --nivel-bg: var(--cor-titulo);
     --nivel-texto: #0e0c0c;

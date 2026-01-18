@@ -188,72 +188,10 @@ function scrollToTop() {
   }
 }
 
-function newletterSubscription() {
-  const form = document.querySelector('.form-newlestter');
-  if (!form) return;
-  let msgDiv = document.querySelector('.newsletter-msg');
-  if (!msgDiv) {
-    msgDiv = document.createElement('div');
-    msgDiv.className = 'newsletter-msg';
-    form.parentNode.insertBefore(msgDiv, form.nextSibling);
-  }
-  form.addEventListener('submit', (e) => {
-    const emailInput = form.querySelector('input[type="email"]');
-    const email = emailInput.value.trim();
-    msgDiv.textContent = '';
-    msgDiv.classList.remove('sucesso', 'erro');
-    if (!validarEmail(email)) {
-      e.preventDefault();
-      msgDiv.textContent = 'Por favor, insira um e-mail válido.';
-      msgDiv.classList.add('erro');
-      emailInput.focus();
-      return;
-    }
-    msgDiv.textContent = 'Inscrição realizada com sucesso!';
-    msgDiv.classList.add('sucesso');
-    form.reset();
-  });
-}
-
-function validarEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-document
-  .getElementById('newsletter-form')
-  .addEventListener('submit', function (e) {
-    e.preventDefault();
-    const emailInput = document.getElementById('email-newlestter');
-    const email = emailInput.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert('Por favor, insira um e-mail válido.');
-      return;
-    }
-    fetch(
-      'https://script.google.com/macros/s/AKfycbwLKaI2iI1MYvg6MRV-Ks5AzML1nfb78bqy5XI8j6TmHkpWcrTeUWZq4cW1m0Hkx-g9/exec',
-      {
-        method: 'POST',
-        body: JSON.stringify({ email }),
-        headers: { 'Content-Type': 'application/json' },
-      },
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.result === 'success') {
-          alert('Inscrição realizada com sucesso!');
-          emailInput.value = '';
-        } else {
-          alert('Erro ao salvar inscrição.');
-        }
-      })
-      .catch(() => alert('Erro ao conectar com o servidor.'));
-  });
-
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
-    initMenuMobile();
-    initProjetos();
-    initSkills();
-    scrollToTop();
-    newletterSubscription();
-  });
+  initThemeToggle();
+  initMenuMobile();
+  initProjetos();
+  initSkills();
+  scrollToTop();
+});
