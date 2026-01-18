@@ -188,6 +188,40 @@ function scrollToTop() {
   }
 }
 
+function newletterSubscription() {
+  const form = document.querySelector('.form-newlestter');
+  if (!form) return;
+  let msgDiv = document.querySelector('.newsletter-msg');
+  if (!msgDiv) {
+    msgDiv = document.createElement('div');
+    msgDiv.className = 'newsletter-msg';
+    form.parentNode.insertBefore(msgDiv, form.nextSibling);
+  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailInput = form.querySelector('input[type="email"]');
+    const email = emailInput.value.trim();
+    msgDiv.textContent = '';
+    msgDiv.classList.remove('sucesso', 'erro');
+    if (!validarEmail(email)) {
+      msgDiv.textContent = 'Por favor, insira um e-mail válido.';
+      msgDiv.classList.add('erro');
+      emailInput.focus();
+      return;
+    }
+    localStorage.setItem('subscribedEmail', email);
+    msgDiv.textContent = 'Inscrição realizada com sucesso!';
+    msgDiv.classList.add('sucesso');
+    emailInput.value = '';
+    console.log('Email salvo no localStorage:', email);
+  });
+}
+
+function validarEmail(email) {
+  // Regex simples para validação de e-mail
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMenuMobile();
