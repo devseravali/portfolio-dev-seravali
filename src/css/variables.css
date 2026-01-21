@@ -1,15 +1,19 @@
 :root {
-    --fonte-principal: 'Poppins', system-ui, sans-serif;
+    --fonte-principal: "Poppins", system-ui, sans-serif;
 
-    --radius-xs: 4px;
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+    --fs-xxs: clamp(0.6rem, 0.7vw, 0.7rem);
+    --fs-xs: clamp(0.7rem, 0.8vw, 0.8rem);
+    --fs-sm: clamp(0.8rem, 0.9vw, 0.9rem);
+    --fs-md: clamp(0.9rem, 1vw, 1rem);
+    --fs-lg: clamp(1rem, 1.2vw, 1.2rem);
+    --fs-xl: clamp(1.2rem, 1.6vw, 1.5rem);
 
-    --gap-xs: 0.25rem;
-    --gap-lg: 2rem;
-    --gap-xl: 4rem;
+    --pad-xs: clamp(0.3rem, 0.5vw, 0.4rem);
+    --pad-sm: clamp(0.4rem, 0.6vw, 0.5rem);
+    --pad-md: clamp(0.8rem, 1vw, 1rem);
+
+    --gap-sm: clamp(0.4rem, 0.6vw, 0.5rem);
+    --gap-md: clamp(1rem, 1.5vw, 1.5rem);
 
     --transicao-rapida: 0.2s ease;
     --transicao: 0.3s ease;
@@ -25,23 +29,23 @@
     --z-tooltip: 1300;
 
     --container-max: 1200px;
-    --container-padding: 1.5rem;
+    --container-padding: clamp(1rem, 2vw, 1.5rem);
 
     --borda-fina: 1px solid;
     --borda-media: 2px solid;
 
+    --radius-sm: 0.8rem;
+    --radius-md: 1.2rem;
+    --radius-pill: 999px;
+
     --opacidade-desativado: 0.6;
 }
 
-:root,
-body.theme-light {
+body {
     --cor-principal: #7a1414;
     --cor-secundaria: #b8962e;
     --cor-titulo: #5a0f0f;
     --cor-dourado-hover: #a98989;
-
-    --newsletter-sucesso: #1b8836;
-    --newsletter-erro: #c0392b;
 
     --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --bg-header: linear-gradient(135deg, #f9fafc 0%, #e2e6ef 100%);
@@ -62,11 +66,13 @@ body.theme-light {
     --btn-bg-hover: #b8962e;
     --btn-texto: #fff8e1;
     --btn-texto-hover: #fff8e1;
+
     --btn-bg-hover-curriculo: #a98989;
     --btn-texto-hover-curriculo: #5a0f0f;
+
     --btn-borda: 1px solid #7a1414;
-    --newsletter-sucesso: #2e7d32;
-    --newsletter-erro: #b71c1c;
+
+    --card-bg: var(--bg-card);
     --card-borda: #a98989;
     --card-hover: #d9c2c2;
 
@@ -89,9 +95,6 @@ body.theme-dark {
     --cor-titulo: #e6c158;
     --cor-dourado-hover: #c9a63d;
 
-    --newsletter-sucesso: #3be37a;
-    --newsletter-erro: #ff4d57;
-
     --bg-body: linear-gradient(135deg, #0e0c0c 0%, #2b0606 100%);
     --bg-header: linear-gradient(135deg, #2b0606 0%, #151010 100%);
     --bg-section: linear-gradient(135deg, #141010 0%, #241a1a 100%);
@@ -109,8 +112,9 @@ body.theme-dark {
 
     --btn-bg: var(--cor-titulo);
     --btn-bg-hover: var(--cor-dourado-hover);
-    --btn-texto: #0e0c0c;
-    --btn-texto-hover: #0e0c0c;
+    --btn-texto: #f8f6f6;
+    --btn-texto-hover: #fff8e1;
+
     --btn-bg-hover-curriculo: #0e0c0c;
     --btn-texto-hover-curriculo: var(--cor-dourado-hover);
     --btn-borda: transparent;
