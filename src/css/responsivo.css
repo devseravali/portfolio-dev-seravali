@@ -1,11 +1,10 @@
-@media (min-width: 395px) and (max-width: 576px) {
-
+@media (max-width: 394px) {
     .container-header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        padding: 1rem;
+        gap: var(--gap-md);
+        padding: var(--pad-md);
         width: 100%;
         box-sizing: border-box;
     }
@@ -21,14 +20,63 @@
         top: 60px;
         right: 20px;
         background: var(--bg-header);
-        padding: 1rem 2rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: var(--pad-md) calc(var(--pad-md) * 2);
+        border-radius: .5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
         z-index: var(--z-menu);
     }
 
     .menu li {
-        margin: 0.5rem 0;
+        margin: var(--gap-sm) 0;
+    }
+
+    .header-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+        position: relative;
+        min-height: 3.5rem;
+    }
+
+    .header-row>.btn-toggle-theme,
+    .header-row>.btn-menu,
+    .header-row>.btn-menu-fechar {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-row>.btn-toggle-theme {
+        left: 0;
+        z-index: 1;
+        margin-left: .5rem;
+    }
+
+    .header-row>.btn-menu,
+    .header-row>.btn-menu-fechar {
+        right: 0;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .btn-menu,
+    .btn-menu-fechar {
+        background: none;
+        border: none;
+        color: var(--cor-titulo);
+        font-size: 1.5rem;
+        padding: var(--pad-md);
+        cursor: pointer;
+        display: flex;
+    }
+
+    .btn-toggle-theme {
+        margin: 0;
     }
 
     .logo {
@@ -41,18 +89,260 @@
     }
 
     .logo-img {
-        max-width: 80px;
-        max-height: 80px;
-        margin-bottom: 0.5rem;
+        max-width: 70px;
+        max-height: 70px;
         display: block;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-top: 1.5rem;
+        margin: 1.5rem .5rem .5rem;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--gap-md);
+        padding: var(--pad-md);
+    }
+
+    .container-header .botoes-hero {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-sm);
+    }
+
+    .foto-principal {
+        width: 120px;
+        height: 120px;
+    }
+
+    .titulo {
+        font-size: var(--fs-lg);
+        margin-top: .5rem;
+    }
+
+    .subtitulo {
+        font-size: var(--fs-md);
+    }
+
+    .profissional {
+        font-size: var(--fs-sm);
+    }
+
+    .btn,
+    .btn-social,
+    .btn-curriculo {
+        font-size: var(--fs-xs);
+        padding: var(--pad-sm) var(--pad-md);
+        margin: auto;
+    }
+
+    .sobre {
+        padding: 1.5rem 1rem;
+    }
+
+    .skills {
+        padding: 2rem 1rem;
+    }
+
+    .projetos {
+        padding: 2rem 1rem;
+    }
+
+    .contato {
+        padding: 2rem 1rem;
+    }
+
+    .conteudo {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .sobre-mim,
+    .header-skills,
+    .titulo-skill,
+    .contato-titulo {
+        font-size: var(--fs-xl);
+    }
+
+    .sobre-texto,
+    .paragrafo-conteudo,
+    .contato-paragrafo {
+        font-size: var(--fs-sm);
+    }
+
+    .conteudo-titulo,
+    .projetos-titulo,
+    .projeto-titulo {
+        font-size: var(--fs-lg);
+    }
+
+    .subtitulo-skill,
+    .subtitulo-projeto {
+        font-size: var(--fs-md);
+    }
+
+    .skills-grupo,
+    .skills-ilha {
+        gap: var(--gap-md);
+    }
+
+    .skill-card {
+        font-size: var(--fs-xs);
+        padding: var(--pad-md);
+    }
+
+    .ilha-titulo {
+        font-size: var(--fs-lg);
+        margin-bottom: .05rem;
+    }
+
+    .button-skill {
+        font-size: var(--fs-xs);
+        padding: var(--pad-xs) .8rem;
+    }
+
+    .button-skill .nivel {
+        font-size: var(--fs-sm);
+    }
+
+    .video-canal {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .video-canal iframe,
+    .video-canal video {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .canal {
+        font-size: var(--fs-xs);
+        padding: var(--pad-xs) .8rem;
+    }
+
+    .projeto {
+        gap: var(--gap-md);
+    }
+
+    .projeto-img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-size: var(--fs-xxs);
+    }
+
+    .info-bloco {
+        font-size: var(--fs-xs);
+        width: 100%;
+        max-width: 150px;
+        min-width: 150px;
+        padding: var(--pad-md);
+        margin: 0 auto 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stack,
+    .funcionalidades,
+    .desafios,
+    .aprendizados {
+        font-size: var(--fs-sm);
+        padding-bottom: .5rem;
+        text-align: center;
+    }
+
+    .lista-projeto {
+        font-size: var(--fs-xs);
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .btn-detalhes,
+    .btn-repositorio,
+    .btn-demo {
+        font-size: var(--fs-xs);
+        padding: var(--pad-xs) .8rem;
+        margin: 1rem .2rem 0;
+    }
+
+    .whatsapp,
+    .email,
+    .linkedin {
+        font-size: var(--fs-sm);
+        margin: 0 .2rem;
+        padding-bottom: 0;
+    }
+
+    .whatsapp i,
+    .email i,
+    .linkedin i {
+        margin-right: 0.4em;
+    }
+
+    .footer {
+        font-size: var(--fs-xs);
+        padding: var(--pad-md);
+    }
+
+    .footer-texto {
+        font-size: var(--fs-xs);
+    }
+
+    .footer-github,
+    .footer-linkedin,
+    .footer-youtube {
+        font-size: 1.2rem;
+        margin: 0 .2rem;
+    }
+
+    .voltar-ao-topo {
+        font-size: 1.2rem;
+        padding: var(--pad-sm);
+    }
+}
+
+@media (min-width: 395px) and (max-width: 576px) {
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-md);
+        padding: var(--pad-md);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .menu.ativo {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--bg-header);
+        padding: var(--pad-md) calc(var(--pad-md) * 2);
+        border-radius: .5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+        z-index: var(--z-menu);
+    }
+
+    .menu li {
+        margin: var(--gap-sm) 0;
     }
 
     .header-row {
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
         width: 100%;
@@ -61,31 +351,28 @@
         min-height: 3.5rem;
     }
 
-    .header-row>.btn-toggle-theme {
+    .header-row>.btn-toggle-theme,
+    .header-row>.btn-menu,
+    .header-row>.btn-menu-fechar {
         position: absolute;
-        left: 0;
-        right: auto;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .header-row>.btn-toggle-theme {
+        left: 0;
         z-index: 1;
-        margin-left: 0.5rem;
+        margin-left: .5rem;
     }
 
     .header-row>.btn-menu,
     .header-row>.btn-menu-fechar {
-        position: absolute;
         right: 0;
-        left: auto;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
         z-index: 2;
+        margin: 0;
     }
 
     .btn-menu,
@@ -94,7 +381,7 @@
         border: none;
         color: var(--cor-titulo);
         font-size: 1.5rem;
-        padding: 1rem;
+        padding: var(--pad-md);
         cursor: pointer;
     }
 
@@ -113,54 +400,95 @@
         margin: 0;
     }
 
+    .logo {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .logo-img {
+        max-width: 80px;
+        max-height: 80px;
+        display: block;
+        margin: 1.5rem .5rem .5rem;
+    }
+
     .foto-principal {
         width: 150px;
         height: 150px;
     }
 
     .titulo {
-        font-size: 1.5rem;
-        margin-top: 0.5rem;
+        font-size: var(--fs-xl);
+        margin-top: .5rem;
     }
 
     .subtitulo {
-        font-size: 1rem;
+        font-size: var(--fs-lg);
     }
 
     .profissional {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
     }
 
     .botoes-hero {
-        gap: 0.5rem;
+        gap: var(--gap-sm);
     }
 
     .btn,
     .btn-social,
     .btn-curriculo {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
     }
 
     .sobre {
         padding: 1.5rem 1rem;
     }
 
-    .sobre-mim {
-        font-size: 1.5rem;
-    }
-
-    .sobre-texto {
-        font-size: 0.9rem;
-    }
-
     .skills {
         padding: 2rem 2rem;
     }
 
-    .header-skills {
-        font-size: 1.5rem;
+    .projetos {
+        padding: 2rem 1rem;
     }
 
+    .contato {
+        padding: 2rem 1rem;
+    }
+
+    .conteudo {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .sobre-mim,
+    .header-skills,
+    .titulo-skill,
+    .contato-titulo,
+    .projetos-titulo {
+        font-size: var(--fs-xl);
+    }
+
+    .sobre-texto,
+    .paragrafo-conteudo,
+    .contato-paragrafo,
+    .canal {
+        font-size: var(--fs-md);
+    }
+
+    .conteudo-titulo {
+        font-size: clamp(1.1rem, 2.6vw, 1.2rem);
+    }
+
+    .subtitulo-skill,
+    .subtitulo-projeto,
+    .subtitulo {
+        font-size: var(--fs-lg);
+    }
 
     .header-skills {
         display: flex;
@@ -172,49 +500,34 @@
     }
 
     .titulo-skill {
-        font-size: 1.5rem;
         text-align: center;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     .subtitulo-skill {
-        font-size: 1rem;
         text-align: center;
         margin-top: 0;
         padding-bottom: 0;
     }
 
     .ilha-titulo {
-        font-size: 1.2rem;
-        margin-bottom: 0.05rem;
+        font-size: var(--fs-lg);
+        margin-bottom: .05rem;
     }
 
-    .skil-card {
-        font-size: 1rem;
-        padding: 1rem;
+    .skill-card {
+        font-size: var(--fs-md);
+        padding: var(--pad-md);
     }
 
     .button-skill {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: var(--fs-sm);
+        padding: var(--pad-xs) .8rem;
     }
 
-    .nivel {
-        font-size: 0.9rem;
-    }
-
-    .conteudo {
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .conteudo-titulo {
-        font-size: 1.2rem;
-    }
-
-    .paragrafo-conteudo {
-        font-size: 0.9rem;
+    .button-skill .nivel {
+        font-size: var(--fs-md);
     }
 
     .video-canal {
@@ -223,6 +536,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
 
     .video-canal iframe,
@@ -233,17 +547,7 @@
     }
 
     .canal {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .projetos {
-        padding: 2rem 1rem;
-    }
-
-    .projetos-titulo {
-        font-size: 1.5rem;
-        margin-bottom: 0;
+        padding: var(--pad-md);
     }
 
     .projeto-img {
@@ -252,29 +556,20 @@
     }
 
     figcaption.projeto-descricao {
-        font-size: 0.5rem;
+        font-size: var(--fs-xxs);
     }
 
     .projeto-titulo {
-        font-size: 1.2rem;
-    }
-
-    .subtitulo-projeto {
-        font-size: 0.8rem;
-    }
-
-    .projetos-infos {
-        font-size: 0.7rem;
-        justify-content: center;
+        font-size: clamp(1.1rem, 3vw, 1.2rem);
     }
 
     .info-bloco {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
         width: 100%;
         max-width: 180px;
         min-width: 180px;
-        padding: 1rem;
-        margin: 0 auto 1rem auto;
+        padding: var(--pad-md);
+        margin: 0 auto 1rem;
         align-items: center;
         text-align: center;
     }
@@ -283,13 +578,13 @@
     .funcionalidades,
     .desafios,
     .aprendizados {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
+        font-size: var(--fs-md);
+        padding-bottom: .5rem;
         text-align: center;
     }
 
     .lista-projeto {
-        font-size: 0.6rem;
+        font-size: var(--fs-xs);
         text-align: center;
         gap: 2rem;
     }
@@ -297,66 +592,58 @@
     .btn-detalhes,
     .btn-repositorio,
     .btn-demo {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-        margin: 1rem 0.2rem 0 0.2rem;
-    }
-
-    .contato {
-        padding: 2rem 1rem;
-    }
-
-    .contato-titulo {
-        font-size: 1.5rem;
-    }
-
-    .contato-paragrafo {
-        font-size: 0.9rem;
+        font-size: var(--fs-sm);
+        padding: var(--pad-xs) .8rem;
+        margin: 1rem .2rem 0;
     }
 
     .whatsapp,
     .email,
     .linkedin {
-        font-size: 0.9rem;
-        margin: 0 0.2rem;
+        font-size: var(--fs-sm);
+        margin: 0 .2rem;
         padding-bottom: 0;
     }
 
+    .whatsapp i,
+    .email i,
+    .linkedin i {
+        margin-right: 0.4em;
+    }
+
     .footer {
-        font-size: 0.8rem;
-        padding: 1rem;
+        font-size: var(--fs-xs);
+        padding: var(--pad-md);
     }
 
     .footer-texto {
-        font-size: 0.8rem;
+        font-size: var(--fs-xs);
     }
 
     .footer-github,
     .footer-linkedin,
     .footer-youtube {
-        font-size: 1.2rem;
-        margin: 0 0.2rem;
+        font-size: 2rem;
+        margin: 0 .2rem;
     }
 
     .footer-links {
-        font-size: 0.9rem;
+        font-size: var(--fs-xs);
     }
 
     .voltar-ao-topo {
         font-size: 1.2rem;
-        padding: 0.5rem;
+        padding: var(--pad-sm);
     }
-
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-
     .container-header {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0.5rem 0.5rem 0 0.5rem;
+        padding: var(--pad-sm) var(--pad-sm) 0;
         width: 100%;
         box-sizing: border-box;
     }
@@ -370,7 +657,7 @@
         gap: 0;
         position: relative;
         min-height: 3.2rem;
-        padding: 0.5rem 0;
+        padding: var(--pad-sm) 0;
     }
 
     .logo {
@@ -391,15 +678,15 @@
     }
 
     .menu li a {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .btn-contato {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .btn-toggle-theme {
-        font-size: 1rem;
+        font-size: var(--fs-md);
         width: 2rem;
         height: 2rem;
         margin: 0 0 0 1.2rem;
@@ -416,29 +703,29 @@
     }
 
     .titulo {
-        font-size: 1.3rem;
-        margin-top: 0.5rem;
+        font-size: clamp(1.2rem, 3.2vw, 1.3rem);
+        margin-top: .5rem;
         padding: 1rem 0;
     }
 
     .subtitulo {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .profissional {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .sobre {
-        padding: 1rem 1rem;
+        padding: 1rem;
     }
 
     .sobre-mim {
-        font-size: 1.3rem;
+        font-size: clamp(1.2rem, 3.2vw, 1.3rem);
     }
 
     .sobre-texto {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
         margin: 1rem;
     }
 
@@ -447,24 +734,24 @@
     }
 
     .header-skills {
-        font-size: 1.3rem;
+        font-size: clamp(1.2rem, 3.2vw, 1.3rem);
     }
 
     .titulo-skill {
-        font-size: 1.3rem;
+        font-size: clamp(1.2rem, 3.2vw, 1.3rem);
     }
 
-    .skill-ilha {
+    .skills-ilha {
         gap: 1rem;
     }
 
-    .skil-card {
-        font-size: 1rem;
-        padding: 0.8rem;
+    .skill-card {
+        font-size: var(--fs-md);
+        padding: .8rem;
     }
 
     .nivel {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .conteudo {
@@ -473,15 +760,15 @@
     }
 
     .conteudo-titulo {
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 2.8vw, 1.1rem);
     }
 
     .paragrafo-conteudo {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .conteudo-destaque {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .video-canal {
@@ -490,19 +777,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
 
     .btn-youtube {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        font-size: var(--fs-md);
+        padding: .4rem .8rem;
     }
 
     .projetos {
-        padding: 1rem 1rem;
-    }
-
-    .projeto-titulo {
-        font-size: 1.1rem;
+        padding: 1rem;
     }
 
     .projeto {
@@ -515,34 +799,30 @@
     }
 
     figcaption.projeto-descricao {
-        font-size: 0.7rem;
+        font-size: var(--fs-sm);
     }
 
     .projeto-titulo {
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 2.8vw, 1.1rem);
     }
 
     .subtitulo-projeto {
-        font-size: 0.9rem;
-    }
-
-    .projetos-infos {
-        font-size: 0.8rem;
+        font-size: var(--fs-md);
     }
 
     .info-bloco {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
         width: 100%;
         max-width: 220px;
         min-width: 120px;
-        padding: 1rem 1rem;
+        padding: 1rem;
         margin-bottom: 0;
         align-items: center;
         text-align: center;
     }
 
     .lista-projeto {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
         gap: 1.5rem;
         text-align: center;
     }
@@ -551,20 +831,20 @@
     .funcionalidades,
     .desafios,
     .aprendizados {
-        font-size: 1rem;
-        padding-bottom: 0.5rem;
+        font-size: var(--fs-lg);
+        padding-bottom: .5rem;
     }
 
     .botoes-projeto {
-        gap: 0.5rem;
+        gap: .5rem;
     }
 
     .btn-detalhes,
     .btn-repositorio,
     .btn-demo {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-        margin: 1rem 0.2rem 0 0.2rem;
+        font-size: var(--fs-md);
+        padding: .4rem .8rem;
+        margin: 1rem .2rem 0;
     }
 
     .contato {
@@ -572,41 +852,140 @@
     }
 
     .contato-titulo {
-        font-size: 1.3rem;
+        font-size: clamp(1.2rem, 3.2vw, 1.3rem);
     }
 
     .contato-paragrafo {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .whatsapp,
     .email,
     .linkedin {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
     }
 
     .footer {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
         padding: 1rem;
     }
 
     .footer-links {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 
     .footer-github,
     .footer-youtube,
     .footer-linkedin {
         font-size: 1.2rem;
-        margin: 0 0.2rem;
+        margin: 0 .2rem;
     }
 
     .voltar-ao-topo {
         font-size: 1.2rem;
-        padding: 0.5rem;
+        padding: .5rem;
     }
 }
 
+@media (min-width: 769px) and (max-width: 991px) {
+    .container-header {
+        padding: 1rem 1rem 0;
+    }
+
+    .menu a {
+        font-size: var(--fs-md);
+        padding-right: 1.5rem;
+    }
+
+    .btn-toggle-theme {
+        font-size: var(--fs-md);
+        width: 2rem;
+        height: 2rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+
+    .foto-principal {
+        width: 160px;
+        height: 160px;
+    }
+
+    .botoes-hero {
+        gap: 1rem;
+    }
+
+    .titulo,
+    .sobre-mim,
+    .projeto-titulo,
+    .titulo-skill,
+    .contato-titulo {
+        font-size: clamp(1.25rem, 2.2vw, 1.4rem);
+    }
+
+    .subtitulo,
+    .subtitulo-projeto,
+    .subtitulo-skill {
+        font-size: var(--fs-lg);
+    }
+
+    .stack,
+    .funcionalidades,
+    .desafios,
+    .aprendizados {
+        font-size: var(--fs-lg);
+        padding-bottom: .5rem;
+    }
+
+    .info-bloco {
+        font-size: var(--fs-md);
+        width: 100%;
+        max-width: 250px;
+        min-width: 150px;
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .whatsapp i,
+    .email i,
+    .linkedin i {
+        margin-right: 0.4em;
+    }
+
+    .btn-demo,
+    .btn-contato,
+    .btn-repositorio,
+    .btn-detalhes {
+        font-size: var(--fs-md);
+        padding: .5rem 1rem;
+    }
+
+    .video-canal iframe,
+    .video-canal video {
+        max-width: 80%;
+    }
+
+    .contato {
+        padding: 3rem 1rem;
+    }
+
+    .footer-github,
+    .footer-linkedin,
+    .footer-youtube {
+        font-size: 1.5rem;
+        margin: 0 .2rem;
+    }
+
+    .voltar-ao-topo {
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+}
 
 @media (min-width: 992px) {
     .menu {
@@ -614,13 +993,13 @@
     }
 
     .menu a {
-        font-size: 1rem;
+        font-size: var(--fs-md);
         padding-right: 2rem;
     }
 
     .btn-menu,
     .btn-menu-fechar {
-        display: none !important;
+        display: none;
     }
 
     .logo-img {
@@ -630,7 +1009,7 @@
     }
 
     .btn-toggle-theme {
-        font-size: 1.1rem;
+        font-size: var(--fs-md);
         width: 2rem;
         height: 2rem;
         aspect-ratio: 1/1;
@@ -652,36 +1031,29 @@
     }
 
     .subtitulo {
-        font-size: 1.2rem;
+        font-size: var(--fs-lg);
     }
 
-    .titulo,
-    .sobre-mim .projeto-titulo,
+    .sobre-mim,
+    .projeto-titulo,
     .titulo-skill,
     .contato-titulo {
-        font-size: 1.5rem;
-    }
-
-    .projetos-infos {
-        font-size: 1rem;
-        justify-content: center;
+        font-size: var(--fs-xl);
     }
 
     .info-bloco {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
         width: 100%;
         max-width: 300px;
         min-width: 200px;
         padding: 3rem 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
     }
 
     .lista-projeto {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
         gap: 1.5rem;
         text-align: center;
     }
@@ -690,10 +1062,15 @@
     .funcionalidades,
     .desafios,
     .aprendizados {
-        font-size: 1rem;
-        padding-bottom: 0.5rem;
+        font-size: var(--fs-lg);
+        padding-bottom: .5rem;
     }
 
+    .whatsapp i,
+    .email i,
+    .linkedin i {
+        margin-right: 0.4em;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -704,32 +1081,31 @@
         align-items: center;
     }
 
-    .titulo,
-    .sobre-mim .projeto-titulo,
-    .titulo-skill,
-    .contato-titulo {
-        font-size: 1.3rem;
-    }
-
-    .skil-card {
-        font-size: 0.7rem;
-        padding: 0.6rem;
+    .skill-card {
+        font-size: var(--fs-xs);
+        padding: .6rem;
     }
 
     .button-skill {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
+    }
+
+    .whatsapp i,
+    .email i,
+    .linkedin i {
+        margin-right: 0.4em;
     }
 
     .footer {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
         padding: 1rem;
     }
 
     .footer-texto {
-        font-size: 0.8rem;
+        font-size: var(--fs-sm);
     }
 
     .footer-links {
-        font-size: 0.9rem;
+        font-size: var(--fs-md);
     }
 }
