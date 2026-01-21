@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,10 +12,48 @@ body {
     width: 100%;
 }
 
-ul li {
-    list-style-type: none;
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
 }
 
-.menu a {
+a {
     text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--cor-titulo);
+    outline-offset: 3px;
 }
